@@ -1,9 +1,9 @@
 import { FC } from 'react'
+import Introduction from '@/components/sections/Introduction/Introduction'
 
 const HomePage: FC = () => (
   <>
-    <h1>Hello</h1>
-    <p>dsadasadsadsadsdsa</p>
+    <Introduction />
   </>
 )
 
