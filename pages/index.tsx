@@ -1,9 +1,24 @@
-import { FC, useCallback, useState } from 'react'
+import { FC, useCallback, useMemo, useState } from 'react'
+
+import colors1 from '@/components/Introduction/Introduction.module.scss'
+
 import Introduction from '@/components/Introduction/Introduction'
 import Navigation from '@/components/Navigation/Navigation'
 
+const colors: Record<number, { [key: string]: string }> = {
+  1: colors1,
+}
+
 const HomePage: FC = () => {
   const [section, setSection] = useState(1)
+
+  const dark = useMemo(() => {
+    return colors[section]?.dark
+  }, [section])
+
+  const light = useMemo(() => {
+    return colors[section]?.light
+  }, [section])
 
   const handleSectionChange = useCallback(
     (action: 'previous' | 'next') => {
@@ -24,7 +39,8 @@ const HomePage: FC = () => {
     <>
       <Introduction />
       <Navigation
-        section={1}
+        dark={dark}
+        light={light}
         onPrevious={() => handleSectionChange('previous')}
         onNext={() => handleSectionChange('next')}
       />

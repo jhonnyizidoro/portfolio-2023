@@ -1,7 +1,7 @@
-import { FC } from 'react'
-import Image from 'next/image'
-
 import background from './images/background.jpg'
+
+import Image from 'next/image'
+import { FC } from 'react'
 
 import styles from './Introduction.module.scss'
 

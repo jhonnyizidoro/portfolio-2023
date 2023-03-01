@@ -1,29 +1,17 @@
-import { FC, useMemo } from 'react'
+import { FC } from 'react'
+
+import { NextSvg, PreviousSvg } from '@/svg'
 
 import styles from './Navigation.module.scss'
 
-import colors1 from '@/components/Introduction/Introduction.module.scss'
-import { NextSvg, PreviousSvg } from '@/svg'
-
 interface Props {
-  section: number
   onPrevious: () => void
   onNext: () => void
+  dark: string
+  light: string
 }
 
-const colors: Record<number, { [key: string]: string }> = {
-  1: colors1,
-}
-
-const Navigation: FC<Props> = ({ section, onPrevious, onNext }) => {
-  const dark = useMemo(() => {
-    return colors[section].dark
-  }, [section])
-
-  const light = useMemo(() => {
-    return colors[section].light
-  }, [section])
-
+const Navigation: FC<Props> = ({ onPrevious, onNext, light, dark }) => {
   return (
     <nav className={styles.container}>
       <div className={styles.background} />
