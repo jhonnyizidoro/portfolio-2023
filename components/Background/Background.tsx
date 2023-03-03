@@ -9,7 +9,14 @@ interface Props {
 }
 
 const Background: FC<Props> = ({ image, opacity }) => (
-  <Image src={image} alt='' className={styles.background} style={{ opacity }} />
+  <Image
+    priority
+    src={image}
+    alt=''
+    className={styles.background}
+    style={{ opacity }}
+    quality={50}
+  />
 )
 
 export default Background
