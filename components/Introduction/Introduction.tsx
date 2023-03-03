@@ -1,14 +1,15 @@
 import background from './images/background.jpg'
 
-import Image from 'next/image'
 import { FC } from 'react'
 
 import styles from './Introduction.module.scss'
 
+import Background from '@/components/Background/Background'
+
 const Introduction: FC = () => (
   <section>
     <div className={styles.container}>
-      <Image src={background} alt='' className={styles.background} />
+      <Background image={background} opacity={0.5} />
       <div className={styles.content}>
         <h1 className={styles.title}>{`Hello, I'm Jhonny`}</h1>
         <h2 className={styles.subtitle}>{`I'm a: frontend engineer`}</h2>

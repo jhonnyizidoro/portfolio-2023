@@ -1,9 +1,10 @@
 import background from './images/background.jpg'
 
-import Image from 'next/image'
 import { FC } from 'react'
 
 import styles from './Skills.module.scss'
+
+import Background from '@/components/Background/Background'
 
 const list = [
   'React',
@@ -19,7 +20,7 @@ const list = [
 
 const Skills: FC = () => (
   <section className={styles.container}>
-    <Image src={background} alt='' className={styles.background} />
+    <Background image={background} opacity={0.5} />
     <div className={styles.card}>
       <h1 className={styles.title}>My skills</h1>
       <p className={styles.text}>

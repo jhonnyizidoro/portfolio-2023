@@ -1,0 +1,17 @@
+$dark: #221918;
+$light: #de9934;
+
+:export {
+  dark: $dark;
+  light: $light;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background: $dark;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-bottom: 113px;
+}

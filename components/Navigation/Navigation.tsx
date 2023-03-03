@@ -14,7 +14,6 @@ interface Props {
 const Navigation: FC<Props> = ({ onPrevious, onNext, light, dark }) => {
   return (
     <nav className={styles.container}>
-      <div className={styles.background} />
       <div className={styles.buttons}>
         <button
           onClick={onPrevious}
