@@ -1,10 +1,12 @@
 import { FC, useCallback, useMemo, useState } from 'react'
 
+import colors5 from '@/components/End/End.module.scss'
 import colors3 from '@/components/Experience/Experience.module.scss'
 import colors1 from '@/components/Introduction/Introduction.module.scss'
 import colors4 from '@/components/Projects/Projects.module.scss'
 import colors2 from '@/components/Skills/Skills.module.scss'
 
+import End from '@/components/End/End'
 import Experience from '@/components/Experience/Experience'
 import Introduction from '@/components/Introduction/Introduction'
 import Navigation from '@/components/Navigation/Navigation'
@@ -16,6 +18,7 @@ const colors: Record<number, { [key: string]: string }> = {
   2: colors2,
   3: colors3,
   4: colors4,
+  5: colors5,
 }
 
 const HomePage: FC = () => {
@@ -50,6 +53,7 @@ const HomePage: FC = () => {
       {section === 2 && <Skills />}
       {section === 3 && <Experience />}
       {section === 4 && <Projects />}
+      {section === 5 && <End />}
       <Navigation
         dark={dark}
         light={light}
