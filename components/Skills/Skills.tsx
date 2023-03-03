@@ -1,8 +1,7 @@
-import background from './images/background.jpg'
-
 import { FC } from 'react'
 
 import styles from './Skills.module.scss'
+import background from './images/background.jpg'
 
 import Background from '@/components/Background/Background'
 

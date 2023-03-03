@@ -1,10 +1,9 @@
-import background from './images/background.jpg'
-
 import { FC, useCallback, useState } from 'react'
 
 import { NextSvg, PreviousSvg } from '@/svg'
 
 import styles from './Experience.module.scss'
+import background from './images/background.jpg'
 
 import Background from '@/components/Background/Background'
 
