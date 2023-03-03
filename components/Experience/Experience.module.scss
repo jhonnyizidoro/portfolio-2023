@@ -15,3 +15,70 @@ $light: #de9934;
   justify-content: space-around;
   padding-bottom: 113px;
 }
+
+.title {
+  font-size: 3.125rem;
+  color: $light;
+  margin-bottom: 40px;
+}
+
+.text {
+  font-size: 1.25rem;
+  max-width: 425px;
+}
+
+.carouselWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.carouselControl {
+  cursor: pointer;
+
+  svg {
+    fill: #c8c8c8;
+    width: 25px;
+  }
+}
+
+.carousel {
+  margin: 0 25px;
+}
+
+.subtitle {
+  font-size: 1.375rem;
+  font-weight: 700;
+}
+
+.card {
+  margin: 25px 0;
+  padding: 35px;
+  backdrop-filter: blur(3px) brightness(130%);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.cardTitle {
+  background: $dark;
+  display: inline-block;
+  padding: 3px 15px;
+  border: 3px solid #4f4f4f;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+
+.cardText {
+  max-width: 425px;
+}
+
+.dots {
+  display: flex;
+  gap: 20px;
+}
+
+.dot {
+  border-radius: 50%;
+  width: 7px;
+  height: 7px;
+  background: white;
+}
