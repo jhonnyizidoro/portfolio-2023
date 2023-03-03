@@ -1,0 +1,70 @@
+$dark: #1d0039;
+$light: #af44ff;
+
+:export {
+  dark: $dark;
+  light: $light;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background: $dark;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-bottom: 113px;
+}
+
+.background {
+  mix-blend-mode: soft-light;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  position: absolute;
+  opacity: 0.5;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.card {
+  padding: 70px;
+  backdrop-filter: blur(5px) brightness(125%);
+  border-radius: 5px;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: $light;
+}
+
+.text {
+  font-size: 1.125rem;
+  margin-top: 30px;
+  max-width: 425px;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.listItem {
+  font-size: 1.125rem;
+  backdrop-filter: blur(3px);
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.02)
+  );
+  padding: 15px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.link {
+  font-size: 0.875rem;
+}
