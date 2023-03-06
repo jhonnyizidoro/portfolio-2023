@@ -1,3 +1,5 @@
+import { useTranslation } from '@/hooks/translation'
+
 import { FC, useCallback, useEffect, useState } from 'react'
 
 import styles from './Introduction.module.scss'
@@ -9,6 +11,7 @@ const subtitles = ['frontend engineer', 'web designer', 'tech lead']
 
 const Introduction: FC = () => {
   const [subtitle, setSubtitle] = useState('')
+  const t = useTranslation('Introduction')
 
   const handleSubtitle = useCallback(() => {
     let activeSubtitle = 0
@@ -58,7 +61,7 @@ const Introduction: FC = () => {
     <>
       <Background image={background} opacity={0.5} />
       <div className={styles.content}>
-        <h1 className={styles.title}>{`Hello, I'm Jhonny`}</h1>
+        <h1 className={styles.title}>{t.title}</h1>
         <h2 className={styles.subtitle}>
           {`I'm a: `}
           <u>{subtitle}</u>
