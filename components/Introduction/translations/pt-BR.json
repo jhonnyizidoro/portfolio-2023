@@ -1,5 +1,6 @@
 {
   "title": "Olá, sou o Jhonny",
   "subtitleStart": "Eu sou:",
-  "subtitles": ["engenheiro frontend", "web designer", "tech lead"]
+  "subtitles": ["engenheiro frontend", "web designer", "tech lead"],
+  "text": "Use os botões abaixo, faça um tour, e me conheça melhor"
 }

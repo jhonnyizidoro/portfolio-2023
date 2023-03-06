@@ -1,5 +1,6 @@
 {
   "title": "Hello, I'm Jhonny",
   "subtitleStart": "I'm a: ",
-  "subtitles": ["frontend engineer", "web designer", "tech lead"]
+  "subtitles": ["frontend engineer", "web designer", "tech lead"],
+  "text": "Use the buttons bellow, take a tour, and know me better"
 }

@@ -66,9 +66,7 @@ const Introduction: FC = () => {
           {t.subtitleStart} <u>{subtitle}</u>
         </h2>
         <div className={styles.spacer} />
-        <p className={styles.text}>
-          Use the buttons bellow, take a tour, and know me better
-        </p>
+        <p className={styles.text}>{t.text}</p>
       </div>
     </>
   )
