@@ -1,5 +1,8 @@
 .section {
   width: 100%;
-  height: 100vh;
-  padding-bottom: 113px;
+  min-height: 100vh;
+  padding-top: 20px;
+  padding-bottom: 133px;
+  display: flex;
+  flex-direction: column;
 }

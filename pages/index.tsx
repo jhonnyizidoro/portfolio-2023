@@ -58,6 +58,7 @@ const HomePage: FC = () => {
       <Navigation
         dark={dark}
         light={light}
+        section={section}
         onPrevious={() => handleSectionChange('previous')}
         onNext={() => handleSectionChange('next')}
       />

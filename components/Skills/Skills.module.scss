@@ -10,7 +10,7 @@ $light: #af44ff;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  height: 100%;
+  flex-grow: 1;
 }
 
 .card {

@@ -1,5 +1,5 @@
 .wrapper {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   padding: 20px;
@@ -24,6 +24,7 @@
   width: 240px;
   justify-content: center;
   cursor: pointer;
+  transition: 0.35s;
 
   &:nth-child(1) {
     margin-right: 20px;
@@ -42,4 +43,9 @@
   svg {
     width: 25px;
   }
+}
+
+.buttonDisabled {
+  opacity: 0.5;
+  pointer-events: none;
 }

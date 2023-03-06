@@ -11,23 +11,34 @@ interface Props {
   onNext: () => void
   dark: string
   light: string
+  section: number
 }
 
-const Navigation: FC<Props> = ({ onPrevious, onNext, light, dark }) => {
+const Navigation: FC<Props> = ({
+  onPrevious,
+  onNext,
+  light,
+  dark,
+  section,
+}) => {
   return (
     <nav className={styles.wrapper}>
       <Player dark={dark} light={light} />
       <div className={styles.buttons}>
         <button
           onClick={onPrevious}
-          className={styles.button}
+          className={`${styles.button} ${
+            section === 1 && styles.buttonDisabled
+          }`}
           style={{ background: light, color: dark }}
         >
           <PreviousSvg fill={dark} /> Previous
         </button>
         <button
           onClick={onNext}
-          className={styles.button}
+          className={`${styles.button} ${
+            section === 5 && styles.buttonDisabled
+          }`}
           style={{ background: light, color: dark }}
         >
           Next <NextSvg fill={dark} />
