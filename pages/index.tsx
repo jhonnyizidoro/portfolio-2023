@@ -6,6 +6,7 @@ import colors1 from '@/components/Introduction/Introduction.module.scss'
 import colors4 from '@/components/Projects/Projects.module.scss'
 import colors2 from '@/components/Skills/Skills.module.scss'
 
+import Container from '@/components/Container/Container'
 import End from '@/components/End/End'
 import Experience from '@/components/Experience/Experience'
 import Introduction from '@/components/Introduction/Introduction'
@@ -48,7 +49,7 @@ const HomePage: FC = () => {
   )
 
   return (
-    <>
+    <Container background={dark}>
       {section === 1 && <Introduction />}
       {section === 2 && <Skills />}
       {section === 3 && <Experience />}
@@ -60,7 +61,7 @@ const HomePage: FC = () => {
         onPrevious={() => handleSectionChange('previous')}
         onNext={() => handleSectionChange('next')}
       />
-    </>
+    </Container>
   )
 }
 

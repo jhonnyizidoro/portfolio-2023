@@ -9,7 +9,7 @@ import background from './images/background.jpg'
 import Background from '@/components/Background/Background'
 
 const End: FC = () => (
-  <section className={styles.container}>
+  <>
     <Background image={background} opacity={0.15} />
     <div className={styles.content}>
       <h1 className={styles.title}>{`That's all!`}</h1>
@@ -45,7 +45,7 @@ const End: FC = () => (
       </div>
       <small className={styles.textSmall}>Phone: +55 41 9 9179-1053</small>
     </div>
-  </section>
+  </>
 )
 
 export default End

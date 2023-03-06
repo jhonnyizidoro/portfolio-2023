@@ -18,7 +18,7 @@ const list = [
 ]
 
 const Skills: FC = () => (
-  <section className={styles.container}>
+  <div className={styles.wrapper}>
     <Background image={background} opacity={0.5} />
     <div className={styles.card}>
       <h1 className={styles.title}>My skills</h1>
@@ -46,7 +46,7 @@ const Skills: FC = () => (
       </ul>
       <span className={styles.link}>Click here to a more detailed list</span>
     </div>
-  </section>
+  </div>
 )
 
 export default Skills

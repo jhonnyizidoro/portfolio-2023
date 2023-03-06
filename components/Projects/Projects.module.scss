@@ -6,11 +6,13 @@ $light: #6ff0bb;
   light: $light;
 }
 
-.container {
-  width: 100%;
-  height: 100vh;
-  background: $dark;
-  padding: 4vh 4vw 113px 4vw;
+.wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  max-width: 95%;
+  margin: auto;
 }
 
 .title {

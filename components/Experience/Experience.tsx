@@ -38,7 +38,7 @@ const Experience: FC = () => {
   )
 
   return (
-    <section className={styles.container}>
+    <div className={styles.wrapper}>
       <Background image={background} opacity={0.15} />
       <div>
         <h1 className={styles.title}>Leading a team</h1>
@@ -86,7 +86,7 @@ const Experience: FC = () => {
           <NextSvg />
         </div>
       </div>
-    </section>
+    </div>
   )
 }
 

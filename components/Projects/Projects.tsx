@@ -21,7 +21,7 @@ const projects = [
 ]
 
 const Projects: FC = () => (
-  <section className={styles.container}>
+  <div className={styles.wrapper}>
     <Background image={background} opacity={0.2} />
     <div>
       <h1 className={styles.title}>Projects</h1>
@@ -46,7 +46,7 @@ const Projects: FC = () => (
         </div>
       ))}
     </div>
-  </section>
+  </div>
 )
 
 export default Projects
