@@ -4,20 +4,20 @@ import { FC, useCallback, useEffect, useState } from 'react'
 
 import styles from './Introduction.module.scss'
 import background from './images/background.jpg'
+import enUs from './translations/en-US.json'
+import ptBr from './translations/pt-BR.json'
 
 import Background from '@/components/Background/Background'
 
-const subtitles = ['frontend engineer', 'web designer', 'tech lead']
-
 const Introduction: FC = () => {
   const [subtitle, setSubtitle] = useState('')
-  const t = useTranslation('Introduction')
+  const t = useTranslation({ enUs, ptBr })
 
   const handleSubtitle = useCallback(() => {
     let activeSubtitle = 0
     let activeIndex = 0
     let typing = true
-    let subtitle = subtitles[activeSubtitle]
+    let subtitle = t.subtitles[activeSubtitle]
     let sleep = 0
 
     return setInterval(() => {
@@ -37,13 +37,13 @@ const Introduction: FC = () => {
           setSubtitle(subtitle.slice(0, activeIndex))
           activeIndex--
         } else {
-          if (activeSubtitle < subtitles.length - 1) {
+          if (activeSubtitle < t.subtitles.length - 1) {
             activeSubtitle++
           } else {
             activeSubtitle = 0
           }
 
-          subtitle = subtitles[activeSubtitle]
+          subtitle = t.subtitles[activeSubtitle]
           typing = true
           sleep = 0
         }
@@ -63,8 +63,7 @@ const Introduction: FC = () => {
       <div className={styles.content}>
         <h1 className={styles.title}>{t.title}</h1>
         <h2 className={styles.subtitle}>
-          {`I'm a: `}
-          <u>{subtitle}</u>
+          {t.subtitleStart} <u>{subtitle}</u>
         </h2>
         <div className={styles.spacer} />
         <p className={styles.text}>

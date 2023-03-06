@@ -5,7 +5,12 @@
   "singleQuote": true,
   "jsxSingleQuote": true,
   "endOfLine": "auto",
-  "importOrder": ["react|next", "^@/svg", "\\.scss|/images", "^@/components"],
+  "importOrder": [
+    "react|next",
+    "^@/svg",
+    "\\.scss|/images|/translations",
+    "^@/components"
+  ],
   "importOrderSeparation": true,
   "importOrderSortSpecifiers": true
 }
