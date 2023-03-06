@@ -1,0 +1,64 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.playPause {
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 0;
+
+  svg {
+    width: 24px;
+  }
+}
+
+.playPauseAnim {
+  animation: playing 5s infinite linear;
+}
+
+.content {
+  margin: 0 10px 0 20px;
+}
+
+.title {
+}
+
+.songName {
+  color: white;
+
+  svg {
+    transform: translateY(2px);
+    margin-right: 5px;
+    fill: white;
+    width: 18px;
+  }
+}
+
+.next {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  background: transparent;
+
+  svg {
+    fill: #c8c8c8;
+    width: 18px;
+  }
+}
+
+@keyframes playing {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(180deg);
+  }
+}

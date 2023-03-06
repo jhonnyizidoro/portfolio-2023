@@ -8,7 +8,7 @@ interface Props {
 }
 
 const Container: FC<Props> = ({ background, children }) => (
-  <section style={{ backgroundColor: background }} className={styles.section}>
+  <section style={{ background: background }} className={styles.section}>
     {children}
   </section>
 )

@@ -4,6 +4,8 @@ import { NextSvg, PreviousSvg } from '@/svg'
 
 import styles from './Navigation.module.scss'
 
+import Player from '@/components/Player/Player'
+
 interface Props {
   onPrevious: () => void
   onNext: () => void
@@ -13,7 +15,8 @@ interface Props {
 
 const Navigation: FC<Props> = ({ onPrevious, onNext, light, dark }) => {
   return (
-    <nav className={styles.container}>
+    <nav className={styles.wrapper}>
+      <Player dark={dark} light={light} />
       <div className={styles.buttons}>
         <button
           onClick={onPrevious}

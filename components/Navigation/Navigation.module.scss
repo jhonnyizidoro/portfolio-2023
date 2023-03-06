@@ -1,15 +1,17 @@
-.container {
+.wrapper {
   position: absolute;
   bottom: 0;
   width: 100%;
   padding: 20px;
   backdrop-filter: brightness(85%) blur(5px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .buttons {
   display: flex;
   position: relative;
-  justify-content: flex-end;
 }
 
 .button {
