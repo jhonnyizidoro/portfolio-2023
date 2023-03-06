@@ -30,7 +30,10 @@ $light: #de9934;
 }
 
 .carouselControl {
-  cursor: pointer;
+  padding: 10px 5px;
+  line-height: 0;
+  background: transparent;
+  border: 0;
 
   svg {
     fill: #c8c8c8;

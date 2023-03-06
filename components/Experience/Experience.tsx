@@ -51,12 +51,12 @@ const Experience: FC = () => {
         </p>
       </div>
       <div className={styles.carouselWrapper}>
-        <div
+        <button
           className={styles.carouselControl}
           onClick={() => handleSlideChange('previous')}
         >
           <PreviousSvg />
-        </div>
+        </button>
         <div className={styles.carousel}>
           <h2 className={styles.subtitle}>My experience as a developer</h2>
           {experiences.map((e, i) =>
@@ -79,12 +79,12 @@ const Experience: FC = () => {
             ))}
           </div>
         </div>
-        <div
+        <button
           className={styles.carouselControl}
           onClick={() => handleSlideChange('next')}
         >
           <NextSvg />
-        </div>
+        </button>
       </div>
     </div>
   )

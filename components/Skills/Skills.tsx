@@ -1,9 +1,13 @@
+import { useTranslation } from '@/hooks/translation'
+
 import { FC, useState } from 'react'
 
 import { CloseSvg } from '@/svg'
 
 import styles from './Skills.module.scss'
 import background from './images/background.jpg'
+import enUs from './translations/en-US.json'
+import ptBr from './translations/pt-BR.json'
 
 import Background from '@/components/Background/Background'
 
@@ -77,26 +81,19 @@ const detailedList = [
 ]
 
 const Skills: FC = () => {
+  const { t } = useTranslation({ enUs, ptBr })
   const [detailed, setDetailed] = useState(false)
 
   return (
     <div className={styles.wrapper}>
       <Background image={background} opacity={0.5} />
       <div className={styles.card}>
-        <h1 className={styles.title}>My skills</h1>
-        <p className={styles.text}>
-          Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-          posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Nullam
-          accumsan lorem in dui. Mauris sollicitudin fermentum libero. Nunc
-          nulla. Praesent porttitor, nulla vitae posuere iaculis, arcu nisl
-          dignissim dolor, a pretium mi sem ut ipsum.
-          <br />
-          <br />
-          Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus.
-          Praesent metus tellus, elementum eu, semper a, adipiscing nec, purus.
-          Fusce vel dui. Vestibulum volutpat pretium libero. Nam pretium turpis
-          et arcu.
-        </p>
+        <h1 className={styles.title}>{t.title}</h1>
+        {t.texts.map((t, i) => (
+          <p className={styles.text} key={i}>
+            {t}
+          </p>
+        ))}
       </div>
       <div>
         <ul className={styles.list}>
@@ -107,7 +104,7 @@ const Skills: FC = () => {
           ))}
         </ul>
         <span className={styles.link} onClick={() => setDetailed(true)}>
-          Click here to a more detailed list
+          {t.buttonText}
         </span>
       </div>
 
