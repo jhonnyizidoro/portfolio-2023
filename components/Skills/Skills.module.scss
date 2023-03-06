@@ -53,4 +53,79 @@ $light: #af44ff;
 
 .link {
   font-size: 0.875rem;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.detailedListWrapper {
+  position: absolute;
+  width: 650px;
+  backdrop-filter: brightness(0.9) blur(10px);
+  border-radius: 5px;
+  padding: 50px 30px 30px;
+  box-shadow: 0 0 20px 9999px rgba(black, 0.5);
+  animation: showDetailedList 2s forwards;
+}
+
+.detailedListClose {
+  padding: 10px 20px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: transparent;
+  border: 0;
+
+  svg {
+    fill: #949292;
+    width: 30px;
+  }
+}
+
+.detailedListOverflow {
+  overflow: auto;
+  max-height: 70vh;
+
+  &::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $light;
+    border-radius: 10px;
+  }
+}
+
+.detailedListTitle {
+  font-size: 1.1rem;
+  color: white;
+  font-weight: 700;
+  margin: 25px 0 10px;
+}
+
+.detailedList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.detailedListItem {
+  background: linear-gradient(to bottom, rgba($dark, 0.8), rgba($dark, 0.6));
+  padding: 15px 0;
+  text-align: center;
+  border-radius: 4px;
+}
+
+@keyframes showDetailedList {
+  from {
+    transform: perspective(500px) rotateX(10deg) translateY(500px);
+    opacity: 0;
+  }
+  to {
+    transform: perspective(500px) rotateX(4deg);
+    opacity: 1;
+  }
 }
