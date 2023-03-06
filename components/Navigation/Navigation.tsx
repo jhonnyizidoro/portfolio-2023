@@ -20,32 +20,26 @@ const Navigation: FC<Props> = ({
   light,
   dark,
   section,
-}) => {
-  return (
-    <nav className={styles.wrapper}>
-      <Player dark={dark} light={light} />
-      <div className={styles.buttons}>
-        <button
-          onClick={onPrevious}
-          className={`${styles.button} ${
-            section === 1 && styles.buttonDisabled
-          }`}
-          style={{ background: light, color: dark }}
-        >
-          <PreviousSvg fill={dark} /> Previous
-        </button>
-        <button
-          onClick={onNext}
-          className={`${styles.button} ${
-            section === 5 && styles.buttonDisabled
-          }`}
-          style={{ background: light, color: dark }}
-        >
-          Next <NextSvg fill={dark} />
-        </button>
-      </div>
-    </nav>
-  )
-}
+}) => (
+  <nav className={styles.wrapper}>
+    <Player dark={dark} light={light} />
+    <div className={styles.buttons}>
+      <button
+        onClick={onPrevious}
+        className={`${styles.button} ${section === 1 && styles.buttonDisabled}`}
+        style={{ background: light, color: dark }}
+      >
+        <PreviousSvg fill={dark} /> Previous
+      </button>
+      <button
+        onClick={onNext}
+        className={`${styles.button} ${section === 5 && styles.buttonDisabled}`}
+        style={{ background: light, color: dark }}
+      >
+        Next <NextSvg fill={dark} />
+      </button>
+    </div>
+  </nav>
+)
 
 export default Navigation
