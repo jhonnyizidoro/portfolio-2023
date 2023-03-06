@@ -1,6 +1,7 @@
+import { useTranslation } from '@/hooks/translation'
+
 import Image from 'next/image'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
 import { FC } from 'react'
 
 import { DownSvg, EnvelopeSvg, GitHubSvg, LinkedinSvg, PhoneSvg } from '@/svg'
@@ -8,9 +9,11 @@ import { DownSvg, EnvelopeSvg, GitHubSvg, LinkedinSvg, PhoneSvg } from '@/svg'
 import styles from './Menu.module.scss'
 import brFlag from './images/br.jpg'
 import usFlag from './images/us.jpg'
+import enUs from './translations/en-US.json'
+import ptBr from './translations/pt-BR.json'
 
 const Menu: FC = () => {
-  const { locale } = useRouter()
+  const { t, l } = useTranslation({ enUs, ptBr })
 
   return (
     <div className={styles.menu}>
@@ -19,28 +22,22 @@ const Menu: FC = () => {
           alt=''
           width={20}
           height={14}
-          src={locale === 'en-US' ? usFlag : brFlag}
+          src={l === 'en-US' ? usFlag : brFlag}
           className={styles.flag}
         />
         <DownSvg />
       </div>
 
       <div className={styles.list}>
-        <Link
-          className={styles.listItem}
-          href='/'
-          locale={locale === 'en-US' ? 'pt-BR' : 'en-US'}
-        >
+        <Link className={styles.listItem} href='/' locale={t.linkLocale}>
           <Image
             alt=''
             width={20}
             height={14}
-            src={locale === 'en-US' ? brFlag : usFlag}
+            src={l === 'en-US' ? brFlag : usFlag}
             className={styles.flag}
           />
-          {locale === 'en-US'
-            ? 'Mudar idioma para Português'
-            : 'Change language to English'}
+          {t.buttonText}
         </Link>
         <div className={styles.listItem}>
           <Link href='mailto:jhonny-cwb@hotmail.com' className={styles.link}>

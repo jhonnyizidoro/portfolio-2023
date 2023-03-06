@@ -1,8 +1,12 @@
+import { useTranslation } from '@/hooks/translation'
+
 import { FC, useCallback, useRef, useState } from 'react'
 
 import { PauseSvg, PlaySvg, SkipSvg, SongSvg } from '@/svg'
 
 import styles from './Player.module.scss'
+import enUs from './translations/en-US.json'
+import ptBr from './translations/pt-BR.json'
 
 const tracks = ['Filipe Ret - Invicto', 'Black Alien - Au Revoir']
 
@@ -12,6 +16,7 @@ interface Props {
 }
 
 const Player: FC<Props> = ({ light, dark }) => {
+  const { t } = useTranslation({ ptBr, enUs })
   const [currentTrack, setCurrentTrack] = useState<number>(0)
   const [playing, setPlaying] = useState(false)
   const refs = useRef<(HTMLAudioElement | null)[]>([])
@@ -62,7 +67,7 @@ const Player: FC<Props> = ({ light, dark }) => {
         {playing ? <PauseSvg fill={dark} /> : <PlaySvg fill={dark} />}
       </button>
       <div className={styles.content}>
-        <div className={styles.title}>{`Play one of my favorite's songs`}</div>
+        <div className={styles.title}>{t.title}</div>
         <div className={styles.songName}>
           <SongSvg />
           {tracks[currentTrack]}

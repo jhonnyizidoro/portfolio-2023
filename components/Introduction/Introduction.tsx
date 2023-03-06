@@ -11,7 +11,7 @@ import Background from '@/components/Background/Background'
 
 const Introduction: FC = () => {
   const [subtitle, setSubtitle] = useState('')
-  const t = useTranslation({ enUs, ptBr })
+  const { t } = useTranslation({ enUs, ptBr })
 
   const handleSubtitle = useCallback(() => {
     let activeSubtitle = 0

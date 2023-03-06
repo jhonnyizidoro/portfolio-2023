@@ -21,5 +21,5 @@ export const useTranslation = <T,>({ ptBr, enUs }: { ptBr: T; enUs: T }) => {
     loadTranslation()
   }, [loadTranslation])
 
-  return t
+  return { t, l: locale }
 }
