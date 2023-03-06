@@ -25,6 +25,11 @@
   justify-content: center;
   transition: 0.35s;
 
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
   &:nth-child(1) {
     margin-right: 20px;
 
@@ -42,9 +47,4 @@
   svg {
     width: 25px;
   }
-}
-
-.buttonDisabled {
-  opacity: 0.5;
-  pointer-events: none;
 }
