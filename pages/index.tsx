@@ -10,6 +10,7 @@ import Container from '@/components/Container/Container'
 import End from '@/components/End/End'
 import Experience from '@/components/Experience/Experience'
 import Introduction from '@/components/Introduction/Introduction'
+import Menu from '@/components/Menu/Menu'
 import Navigation from '@/components/Navigation/Navigation'
 import Projects from '@/components/Projects/Projects'
 import Skills from '@/components/Skills/Skills'
@@ -50,6 +51,7 @@ const HomePage: FC = () => {
 
   return (
     <Container background={dark}>
+      <Menu />
       {section === 1 && <Introduction />}
       {section === 2 && <Skills />}
       {section === 3 && <Experience />}

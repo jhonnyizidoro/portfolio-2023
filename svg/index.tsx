@@ -1,4 +1,5 @@
 export { default as CloseSvg } from './Close'
+export { default as DownSvg } from './Down'
 export { default as EnvelopeSvg } from './Envelope'
 export { default as GitHubSvg } from './GitHub'
 export { default as LinkedinSvg } from './Linkedin'
