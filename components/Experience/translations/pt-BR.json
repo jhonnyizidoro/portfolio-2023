@@ -1,0 +1,25 @@
+{
+  "title": "Liderando um time",
+  "text": "No último ano eu tenho trabalhado no projeto World Pulse como tech lead. My função, além de desenvolvedor, é de tomar decisões técnicas, liderar as reuniões de planejamento de sprints, distribuir as tasks entre os desenvolvedores, estimar as tasks e fazer os deploys e correções e funcionalidades. Além disso, nesse projeto, fiquei encarregado de configurar o projeto desde o começo, do banco de dados ao servidor.",
+  "subtitle": "Minhas experiências",
+  "previousButtonLabel": "Mostrar slide anterior",
+  "nextButtonLabel": "Mostrar próximo slide",
+  "experiences": [
+    {
+      "company": "Globo",
+      "text": "Com a Globo sendo o maior canal de TV do Brasil, eu trabalhei na equipe da Globoplay, que tem milhões de usuários simultâneos. Esse projeto foi muito desafiador, desenvolver para Smart TVs requer muita atenção em performance e suporte para uma grande variedade de fabricantes. O app foi feito usando React e o processo de build era muito complexo."
+    },
+    {
+      "company": "E-completo",
+      "text": "eu trabalhei nesse projeto por 3 anos, construindo do 0 um sistema multi-tenant para revendas de carros. Tínhamos mais de 150 sites rodando. Nesse projeto foi onde eu aprendi como alcançar 100% nas métricas do Google Lighthouse: SEO, Performance, Acessibilidade, Melhores Práticas e PWA. Todos os nossos sites estavam indexados na primeira página do Google, eu eu também era responsável por fazer o design dos sites. O sistema foi construído utilizando Laravel + MariaDB no backend, e um servidor com Node + Express consumindo a API."
+    },
+    {
+      "company": "Free Lancer",
+      "text": "Eu trabalhe por anos como freelancer, e ainda trabalho. Eu aprendi muito trabalhando em uma grande variedade de projetos, e também desenvolvi muitos projetos do zero usando os mais variados tipos de tecnologia, como React, Node, PHP e etc. Eu adicionei alguns exemplos na próxima etapa."
+    },
+    {
+      "company": "Banco Bari",
+      "text": "O Banco Bari é um banco digital onde eu e meu time desenvolvemos o site deles em 2019 utilizando NextJS. Era uma das primeiras versões do NextJS, e sua popularidade não chegava nem perto do que é hoje."
+    }
+  ]
+}

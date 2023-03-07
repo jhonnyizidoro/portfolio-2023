@@ -76,6 +76,9 @@ const detailedList = [
       'Pipelines',
       'GitHub Actions',
       'BitBucket Pipelines',
+      'Caching',
+      'Cloudflare',
+      'WCAG',
     ],
   },
 ]

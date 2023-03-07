@@ -1,25 +1,18 @@
+import { useTranslation } from '@/hooks/translation'
+
 import { FC, useCallback, useState } from 'react'
 
 import { NextSvg, PreviousSvg } from '@/svg'
 
 import styles from './Experience.module.scss'
 import background from './images/background.jpg'
+import enUs from './translations/en-US.json'
+import ptBr from './translations/pt-BR.json'
 
 import Background from '@/components/Background/Background'
 
-const experiences = [
-  {
-    company: 'Globo',
-    description:
-      'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Nullam accumsan lorem in dui. Mauris sollicitudin fermentum libero. Nunc nulla. Praesent porttitor, nulla vitae posuere iaculis, arcu nisl dignissim dolor, a pretium mi sem ut ipsum.',
-  },
-  {
-    company: 'E-completo',
-    description: 'Vestibulum ante ipsum primis in faucibus orci luctus et ',
-  },
-]
-
 const Experience: FC = () => {
+  const { t } = useTranslation({ enUs, ptBr })
   const [slide, setSlide] = useState(1)
 
   const handleSlideChange = useCallback(
@@ -27,50 +20,52 @@ const Experience: FC = () => {
       if (action === 'previous') {
         if (slide > 1) {
           setSlide(slide - 1)
+        } else {
+          setSlide(t.experiences.length)
         }
       } else {
-        if (slide < experiences.length) {
+        if (slide < t.experiences.length) {
           setSlide(slide + 1)
+        } else {
+          setSlide(1)
         }
       }
     },
-    [slide],
+    [slide, t.experiences.length],
   )
 
   return (
     <div className={styles.wrapper}>
       <Background image={background} opacity={0.15} />
       <div>
-        <h1 className={styles.title}>Leading a team</h1>
-        <p className={styles.text}>
-          Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-          posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Nullam
-          accumsan lorem in dui. Mauris sollicitudin fermentum libero. Nunc
-          nulla. Praesent porttitor, nulla vitae posuere iaculis, arcu nisl
-          dignissim dolor, a pretium mi sem ut ipsum.
-        </p>
+        <h1 className={styles.title}>{t.title}</h1>
+        <p className={styles.text}>{t.text}</p>
       </div>
       <div className={styles.carouselWrapper}>
         <button
+          type='button'
+          aria-label={t.previousButtonLabel}
           className={styles.carouselControl}
           onClick={() => handleSlideChange('previous')}
         >
           <PreviousSvg />
         </button>
         <div className={styles.carousel}>
-          <h2 className={styles.subtitle}>My experience as a developer</h2>
-          {experiences.map((e, i) =>
-            i + 1 === slide ? (
-              <div className={styles.card} key={e.company}>
+          <h2 className={styles.subtitle}>{t.subtitle}</h2>
+          <div className={styles.carouselSlides}>
+            {t.experiences.map((e) => (
+              <div
+                className={styles.card}
+                key={e.company}
+                style={{ transform: `translateX(-${(slide - 1) * 100}%)` }}
+              >
                 <h3 className={styles.cardTitle}>{e.company}</h3>
-                <p className={styles.cardText}>{e.description}</p>
+                <p>{e.text}</p>
               </div>
-            ) : (
-              <></>
-            ),
-          )}
+            ))}
+          </div>
           <div className={styles.dots}>
-            {experiences.map((_, i) => (
+            {t.experiences.map((_, i) => (
               <div
                 className={styles.dot}
                 key={i}
@@ -80,6 +75,8 @@ const Experience: FC = () => {
           </div>
         </div>
         <button
+          type='button'
+          aria-label={t.nextButtonLabel}
           className={styles.carouselControl}
           onClick={() => handleSlideChange('next')}
         >
