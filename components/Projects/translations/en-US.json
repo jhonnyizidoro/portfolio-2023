@@ -1,0 +1,43 @@
+{
+  "title": "Projects",
+  "subtitle": "Some of my projects as a freelancer",
+  "linkLabel": "Open the project image",
+  "projects": [
+    {
+      "id": "7place",
+      "name": "7Place",
+      "text": "Premium vehicles store",
+      "items": ["Design", "Develop"]
+    },
+    {
+      "id": "casamento",
+      "name": "Jeny & Leo",
+      "text": "Marriage site with an integrated store to buy gifts",
+      "items": ["Design", "Develop"]
+    },
+    {
+      "id": "montserrat",
+      "name": "Montserrat Wine Experience",
+      "text": "Premium wine store",
+      "items": ["Design", "Develop"]
+    },
+    {
+      "id": "recife",
+      "name": "Cars Recife",
+      "text": "Brazilian ad portal to sell vehicles",
+      "items": ["Design", "Develop"]
+    },
+    {
+      "id": "reservas",
+      "name": "Sierra de Albarracin",
+      "text": "Hotel booking website like AirBnb",
+      "items": ["Design"]
+    },
+    {
+      "id": "shiftcar",
+      "name": "ShiftCar",
+      "text": "Premium vehicles store",
+      "items": ["Design", "Develop"]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "title": "Projetos",
+  "subtitle": "Alguns de meus projetos como freelancer",
+  "linkLabel": "Abrir imagem do projeto",
+  "projects": [
+    {
+      "id": "7place",
+      "name": "7Place",
+      "text": "Loja de veículos premium",
+      "items": ["Design", "Develop"]
+    },
+    {
+      "id": "casamento",
+      "name": "Jeny & Leo",
+      "text": "Site de casamento com venda de presentes integrado",
+      "items": ["Design", "Develop"]
+    },
+    {
+      "id": "montserrat",
+      "name": "Montserrat Wine Experience",
+      "text": "Loja de vinho premium",
+      "items": ["Design", "Develop"]
+    },
+    {
+      "id": "recife",
+      "name": "Cars Recife",
+      "text": "Portal de venda de veículos",
+      "items": ["Design", "Develop"]
+    },
+    {
+      "id": "reservas",
+      "name": "Sierra de Albarracin",
+      "text": "Site de reservas estilo AirBnb",
+      "items": ["Design"]
+    },
+    {
+      "id": "shiftcar",
+      "name": "ShiftCar",
+      "text": "Loja de veículos premium",
+      "items": ["Design", "Develop"]
+    }
+  ]
+}

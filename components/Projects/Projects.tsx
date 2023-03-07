@@ -1,52 +1,61 @@
+import { useTranslation } from '@/hooks/translation'
+
 import Image from 'next/image'
+import Link from 'next/link'
 import { FC } from 'react'
 
 import styles from './Projects.module.scss'
 import background from './images/background.jpg'
 import cardBackground from './images/card-background.jpg'
-import projectImage1 from './images/projects/shiftcar.jpg'
+import enUs from './translations/en-US.json'
+import ptBr from './translations/pt-BR.json'
 
 import Background from '@/components/Background/Background'
 
-const repeat = (arr: any[], n: number) => [].concat(...Array(n).fill(arr))
+const Projects: FC = () => {
+  const { t } = useTranslation({ ptBr, enUs })
 
-const projects = [
-  {
-    name: 'SiftCar',
-    description:
-      'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;',
-    image: projectImage1,
-    list: ['Design', 'Develop'],
-  },
-]
-
-const Projects: FC = () => (
-  <div className={styles.wrapper}>
-    <Background image={background} opacity={0.2} />
-    <div>
-      <h1 className={styles.title}>Projects</h1>
-      <h2 className={styles.subtitle}>Some of my projects as a free lancer</h2>
+  return (
+    <div className={styles.wrapper}>
+      <Background image={background} opacity={0.2} />
+      <div>
+        <h1 className={styles.title}>{t.title}</h1>
+        <h2 className={styles.subtitle}>{t.subtitle}</h2>
+      </div>
+      <div className={styles.cards}>
+        {t.projects.map((p) => (
+          <Link
+            key={p.id}
+            className={styles.card}
+            href={`/images/projects/${p.id}.jpg`}
+            target='_blank'
+            aria-label={`${t.linkLabel} ${p.name}`}
+          >
+            <Background image={cardBackground} opacity={0.11} />
+            <h3 className={styles.cardTitle}>{p.name}</h3>
+            <p className={styles.cardSubtitle}>{p.text}</p>
+            <div className={styles.cardFooter}>
+              <Image
+                src={`/images/projects/${p.id}-m.jpg`}
+                alt=''
+                className={styles.cardImage}
+                width={150}
+                height={100}
+                quality={50}
+              />
+              <ul className={styles.cardList}>
+                {p.items.map((i) => (
+                  <li key={`${i}-${p.id}`} className={styles.cardListItem}>
+                    - {i}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </Link>
+        ))}
+      </div>
     </div>
-    <div className={styles.cards}>
-      {repeat(projects, 6).map((p: (typeof projects)[number], i) => (
-        <div key={i} className={styles.card}>
-          <Background image={cardBackground} opacity={0.11} />
-          <h3 className={styles.cardTitle}>{p.name}</h3>
-          <p className={styles.cardSubtitle}>{p.description}</p>
-          <div className={styles.cardFooter}>
-            <Image src={p.image} alt='' className={styles.cardImage} />
-            <ul className={styles.cardList}>
-              {p.list.map((ii) => (
-                <li key={`${i}-${ii}`} className={styles.cardListItem}>
-                  - {ii}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      ))}
-    </div>
-  </div>
-)
+  )
+}
 
 export default Projects
