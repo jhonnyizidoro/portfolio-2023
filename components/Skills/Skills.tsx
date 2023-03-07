@@ -88,54 +88,56 @@ const Skills: FC = () => {
   const [detailed, setDetailed] = useState(false)
 
   return (
-    <div className={styles.wrapper}>
+    <>
       <Background image={background} opacity={0.5} />
-      <div className={styles.card}>
-        <h1 className={styles.title}>{t.title}</h1>
-        {t.texts.map((t, i) => (
-          <p className={styles.text} key={i}>
-            {t}
-          </p>
-        ))}
-      </div>
-      <div>
-        <ul className={styles.list}>
-          {list.map((i) => (
-            <li className={styles.listItem} key={i}>
-              {i}
-            </li>
+      <div className={styles.wrapper}>
+        <div className={styles.card}>
+          <h1 className={styles.title}>{t.title}</h1>
+          {t.texts.map((t, i) => (
+            <p className={styles.text} key={i}>
+              {t}
+            </p>
           ))}
-        </ul>
-        <span className={styles.link} onClick={() => setDetailed(true)}>
-          {t.buttonText}
-        </span>
-      </div>
-
-      {detailed && (
-        <div className={styles.detailedListWrapper}>
-          <button
-            className={styles.detailedListClose}
-            onClick={() => setDetailed(false)}
-          >
-            <CloseSvg />
-          </button>
-          <div className={styles.detailedListOverflow}>
-            {detailedList.map((i) => (
-              <div key={i.title}>
-                <h2 className={styles.detailedListTitle}>{i.title}</h2>
-                <ul className={styles.detailedList}>
-                  {i.list.map((i) => (
-                    <li className={styles.detailedListItem} key={i}>
-                      {i}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
         </div>
-      )}
-    </div>
+        <div>
+          <ul className={styles.list}>
+            {list.map((i) => (
+              <li className={styles.listItem} key={i}>
+                {i}
+              </li>
+            ))}
+          </ul>
+          <span className={styles.link} onClick={() => setDetailed(true)}>
+            {t.buttonText}
+          </span>
+        </div>
+
+        {detailed && (
+          <div className={styles.detailedListWrapper}>
+            <button
+              className={styles.detailedListClose}
+              onClick={() => setDetailed(false)}
+            >
+              <CloseSvg />
+            </button>
+            <div className={styles.detailedListOverflow}>
+              {detailedList.map((i) => (
+                <div key={i.title}>
+                  <h2 className={styles.detailedListTitle}>{i.title}</h2>
+                  <ul className={styles.detailedList}>
+                    {i.list.map((i) => (
+                      <li className={styles.detailedListItem} key={i}>
+                        {i}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+    </>
   )
 }
 

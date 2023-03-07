@@ -11,11 +11,14 @@ $light: #de9934;
   align-items: center;
   justify-content: space-around;
   flex-grow: 1;
+
+  // Animation
+  animation: slideInRight 1s;
 }
 
 .content {
   // Animation
-  animation: fadeInRight 1s;
+  animation: slideInRight 1s;
 }
 
 .title {
@@ -100,11 +103,9 @@ $light: #de9934;
   background: white;
 }
 
-@keyframes fadeInRight {
+@keyframes slideInRight {
   from {
     transform: translate(-250px, -250px);
-    opacity: 0;
-    filter: blur(6px);
   }
 }
 

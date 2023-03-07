@@ -35,55 +35,57 @@ const Experience: FC = () => {
   )
 
   return (
-    <div className={styles.wrapper}>
+    <>
       <Background image={background} opacity={0.15} />
-      <div className={styles.content}>
-        <h1 className={styles.title}>{t.title}</h1>
-        <p className={styles.text}>{t.text}</p>
-      </div>
-      <div className={styles.carouselWrapper}>
-        <button
-          type='button'
-          aria-label={t.previousButtonLabel}
-          className={styles.carouselControl}
-          onClick={() => handleSlideChange('previous')}
-        >
-          <PreviousSvg />
-        </button>
-        <div className={styles.carousel}>
-          <h2 className={styles.subtitle}>{t.subtitle}</h2>
-          <div className={styles.carouselSlides}>
-            {t.experiences.map((e) => (
-              <div
-                className={styles.card}
-                key={e.company}
-                style={{ transform: `translateX(-${(slide - 1) * 100}%)` }}
-              >
-                <h3 className={styles.cardTitle}>{e.company}</h3>
-                <p>{e.text}</p>
-              </div>
-            ))}
-          </div>
-          <div className={styles.dots}>
-            {t.experiences.map((_, i) => (
-              <div
-                className={styles.dot}
-                key={i}
-                style={{ opacity: i + 1 === slide ? 1 : 0.5 }}
-              />
-            ))}
-          </div>
+      <div className={styles.wrapper}>
+        <div className={styles.content}>
+          <h1 className={styles.title}>{t.title}</h1>
+          <p className={styles.text}>{t.text}</p>
         </div>
-        <button
-          type='button'
-          aria-label={t.nextButtonLabel}
-          className={styles.carouselControl}
-          onClick={() => handleSlideChange('next')}
-        >
-          <NextSvg />
-        </button>
+        <div className={styles.carouselWrapper}>
+          <button
+            type='button'
+            aria-label={t.previousButtonLabel}
+            className={styles.carouselControl}
+            onClick={() => handleSlideChange('previous')}
+          >
+            <PreviousSvg />
+          </button>
+          <div className={styles.carousel}>
+            <h2 className={styles.subtitle}>{t.subtitle}</h2>
+            <div className={styles.carouselSlides}>
+              {t.experiences.map((e) => (
+                <div
+                  className={styles.card}
+                  key={e.company}
+                  style={{ transform: `translateX(-${(slide - 1) * 100}%)` }}
+                >
+                  <h3 className={styles.cardTitle}>{e.company}</h3>
+                  <p>{e.text}</p>
+                </div>
+              ))}
+            </div>
+            <div className={styles.dots}>
+              {t.experiences.map((_, i) => (
+                <div
+                  className={styles.dot}
+                  key={i}
+                  style={{ opacity: i + 1 === slide ? 1 : 0.5 }}
+                />
+              ))}
+            </div>
+          </div>
+          <button
+            type='button'
+            aria-label={t.nextButtonLabel}
+            className={styles.carouselControl}
+            onClick={() => handleSlideChange('next')}
+          >
+            <NextSvg />
+          </button>
+        </div>
       </div>
-    </div>
+    </>
   )
 }
 
