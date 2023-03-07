@@ -4,5 +4,6 @@
     "Hi, I'm Jhonny and I live in Brazil. I've been working as a software developer for the last 6 years. At the beginning of my career I worked as PHP developer, but I quickly migrated to the area that I love: the React / Node ecosystem.",
     "I'm currently working at a project leading a team, making technical decisions and managing the activities the team has. I'm also working as a freelancer in some projects, because the project I'm working on is a part time project."
   ],
-  "buttonText": "Click here to a more detailed list"
+  "buttonText": "Click here to a more detailed list",
+  "closeListButtonLabel": "Close detailed list"
 }

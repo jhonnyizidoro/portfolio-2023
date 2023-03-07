@@ -60,9 +60,11 @@ const Player: FC<Props> = ({ light, dark }) => {
         />
       ))}
       <button
-        className={`${styles.playPause} ${playing && styles.playPauseAnim}`}
-        style={{ background: light }}
+        type='button'
         onClick={handlePlay}
+        aria-label={t.title}
+        style={{ background: light }}
+        className={`${styles.playPause} ${playing && styles.playPauseAnim}`}
       >
         {playing ? <PauseSvg fill={dark} /> : <PlaySvg fill={dark} />}
       </button>
@@ -73,7 +75,12 @@ const Player: FC<Props> = ({ light, dark }) => {
           {tracks[currentTrack]}
         </div>
       </div>
-      <button className={styles.next} onClick={handleNext}>
+      <button
+        type='button'
+        onClick={handleNext}
+        className={styles.next}
+        aria-label={t.skipButtonLabel}
+      >
         <SkipSvg />
       </button>
     </div>

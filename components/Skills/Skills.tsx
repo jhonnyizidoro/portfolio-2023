@@ -107,7 +107,11 @@ const Skills: FC = () => {
               </li>
             ))}
           </ul>
-          <span className={styles.link} onClick={() => setDetailed(true)}>
+          <span
+            role='button'
+            className={styles.link}
+            onClick={() => setDetailed(true)}
+          >
             {t.buttonText}
           </span>
         </div>
@@ -115,6 +119,8 @@ const Skills: FC = () => {
         {detailed && (
           <div className={styles.detailedListWrapper}>
             <button
+              type='button'
+              aria-label={t.closeListButtonLabel}
               className={styles.detailedListClose}
               onClick={() => setDetailed(false)}
             >

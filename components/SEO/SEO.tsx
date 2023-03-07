@@ -7,6 +7,7 @@ import enUs from './translations/en-US.json'
 import ptBr from './translations/pt-BR.json'
 
 const ogImage = '/fav/og-image.jpg'
+const domain = 'https://portfolio-2023-blush-eight.vercel.app/'
 
 const SEO: FC = () => {
   const { t } = useTranslation({ enUs, ptBr })
@@ -14,15 +15,15 @@ const SEO: FC = () => {
   return (
     <Head>
       <title>{t.title}</title>
-      <link rel='canonical' href='/' />
-      <meta name='description' content='' />
+      <link rel='canonical' href={domain} />
+      <meta name='description' content={t.description} />
       <meta name='robots' content='index, follow' />
 
       <meta property='og:type' content='website' />
       <meta property='og:title' content={t.title} />
       <meta property='og:description' content={t.description} />
       <meta property='og:image' content={ogImage} />
-      <meta property='og:url' content='/' />
+      <meta property='og:url' content={domain} />
       <meta property='og:site_name' content='World Pulse' />
 
       <meta name='twitter:title' content={t.title} />

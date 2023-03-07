@@ -32,6 +32,7 @@ const Navigation: FC<Props> = ({
       <Player dark={dark} light={light} />
       <div className={styles.buttons}>
         <button
+          type='button'
           onClick={onPrevious}
           disabled={section === 1}
           className={styles.button}
@@ -41,6 +42,7 @@ const Navigation: FC<Props> = ({
           <PreviousSvg fill={dark} /> {t.previousButtonText}
         </button>
         <button
+          type='button'
           onClick={onNext}
           disabled={section === 5}
           className={styles.button}
