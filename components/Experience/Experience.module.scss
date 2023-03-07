@@ -13,6 +13,11 @@ $light: #de9934;
   flex-grow: 1;
 }
 
+.content {
+  // Animation
+  animation: fadeInRight 1s;
+}
+
 .title {
   font-size: 3.125rem;
   color: $light;
@@ -27,6 +32,9 @@ $light: #de9934;
 .carouselWrapper {
   display: flex;
   align-items: center;
+
+  // Animation
+  animation: slideInLeft 0.8s forwards;
 }
 
 .carouselControl {
@@ -90,4 +98,18 @@ $light: #de9934;
   width: 7px;
   height: 7px;
   background: white;
+}
+
+@keyframes fadeInRight {
+  from {
+    transform: translate(-250px, -250px);
+    opacity: 0;
+    filter: blur(6px);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(200px);
+  }
 }

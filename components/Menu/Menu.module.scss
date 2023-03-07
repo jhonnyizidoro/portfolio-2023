@@ -35,8 +35,10 @@
   right: 15px;
   top: 30px;
   display: none;
-  animation: showList 0.35s forwards;
   backdrop-filter: blur(5px) brightness(135%) opacity(0.7);
+
+  // Animation
+  animation: slideInLeft 0.35s forwards;
 }
 
 .listItem {
@@ -58,7 +60,7 @@
   }
 }
 
-@keyframes showList {
+@keyframes slideInLeft {
   from {
     transform: translateX(15px);
     opacity: 0;

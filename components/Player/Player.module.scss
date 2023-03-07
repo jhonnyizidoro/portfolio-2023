@@ -19,7 +19,8 @@
 }
 
 .playPauseAnim {
-  animation: playing 5s infinite linear;
+  // Animation
+  animation: rotate 5s infinite linear;
 }
 
 .content {
@@ -55,7 +56,7 @@
   }
 }
 
-@keyframes playing {
+@keyframes rotate {
   from {
     transform: rotateZ(0deg);
   }

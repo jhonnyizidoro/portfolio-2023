@@ -37,7 +37,7 @@ const Experience: FC = () => {
   return (
     <div className={styles.wrapper}>
       <Background image={background} opacity={0.15} />
-      <div>
+      <div className={styles.content}>
         <h1 className={styles.title}>{t.title}</h1>
         <p className={styles.text}>{t.text}</p>
       </div>

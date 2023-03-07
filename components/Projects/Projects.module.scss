@@ -18,11 +18,17 @@ $light: #6ff0bb;
 .title {
   font-size: 3.125rem;
   color: $light;
+
+  // Animation
+  animation: slideInRight 0.35s forwards;
 }
 
 .subtitle {
   font-size: 1.25rem;
   margin: 5px 0 20px;
+
+  // Animation
+  animation: slideInRight 0.85s forwards;
 }
 
 .cards {
@@ -37,6 +43,17 @@ $light: #6ff0bb;
   overflow: hidden;
   padding: 20px;
   position: relative;
+
+  // Animation
+  animation: slideInRight 0.5s forwards;
+  opacity: 0;
+
+  @for $i from 1 through 3 {
+    &:nth-child(#{$i}),
+    &:nth-child(#{$i + 3}) {
+      animation-delay: #{$i / 10}s;
+    }
+  }
 }
 
 .cardTitle {
@@ -56,4 +73,15 @@ $light: #6ff0bb;
 .cardImage {
   border-radius: 3px;
   margin-right: 15px;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
 }

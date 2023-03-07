@@ -18,6 +18,9 @@ $light: #af44ff;
   backdrop-filter: blur(5px) brightness(125%);
   border-radius: 5px;
   overflow: hidden;
+
+  // Animation
+  animation: slideDown 0.8s;
 }
 
 .title {
@@ -49,12 +52,27 @@ $light: #af44ff;
   padding: 15px;
   text-align: center;
   border-radius: 4px;
+
+  // Animation
+  opacity: 0;
+  animation: slideDown 0.5s forwards;
+
+  @for $i from 1 through 9 {
+    &:nth-child(#{$i}) {
+      animation-delay: #{$i / 30}s;
+    }
+  }
 }
 
 .link {
   font-size: 0.875rem;
   cursor: pointer;
   text-decoration: underline;
+  display: block;
+
+  // Animation
+  opacity: 0;
+  animation: slideDown 1s 0.5s forwards;
 }
 
 .detailedListWrapper {
@@ -64,8 +82,10 @@ $light: #af44ff;
   border-radius: 5px;
   padding: 50px 30px 30px;
   box-shadow: 0 0 20px 9999px rgba(black, 0.5);
-  animation: showDetailedList 2s forwards cubic-bezier(0, 1, 0.44, 1);
   z-index: 2;
+
+  // Animation
+  animation: slideUp 2s forwards cubic-bezier(0, 1, 0.44, 1);
 }
 
 .detailedListClose {
@@ -120,7 +140,18 @@ $light: #af44ff;
   border-radius: 4px;
 }
 
-@keyframes showDetailedList {
+@keyframes slideDown {
+  from {
+    transform: perspective(200px) rotateX(-5deg) translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
   from {
     transform: perspective(500px) rotateX(10deg) translateY(500px);
     opacity: 0;
