@@ -13,6 +13,7 @@ import Introduction from '@/components/Introduction/Introduction'
 import Menu from '@/components/Menu/Menu'
 import Navigation from '@/components/Navigation/Navigation'
 import Projects from '@/components/Projects/Projects'
+import SEO from '@/components/SEO/SEO'
 import Skills from '@/components/Skills/Skills'
 
 const colors: Record<number, { [key: string]: string }> = {
@@ -51,6 +52,7 @@ const HomePage: FC = () => {
 
   return (
     <Container background={dark}>
+      <SEO />
       <Menu />
       {section === 1 && <Introduction />}
       {section === 2 && <Skills />}
