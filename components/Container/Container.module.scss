@@ -1,9 +1,17 @@
 .section {
   width: 100%;
   min-height: 100vh;
-  padding-top: 20px;
-  padding-bottom: 133px;
   display: flex;
   flex-direction: column;
   position: relative;
+
+  @media (min-width: 600px) {
+    padding-top: 20px;
+    padding-bottom: 133px;
+  }
+
+  @media (max-width: 600px) {
+    padding-top: 10px;
+    padding-bottom: 143px;
+  }
 }

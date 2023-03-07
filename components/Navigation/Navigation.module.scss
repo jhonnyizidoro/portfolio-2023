@@ -2,16 +2,27 @@
   position: fixed;
   bottom: 0;
   width: 100%;
-  padding: 20px;
   backdrop-filter: brightness(85%) blur(5px);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+
+  @media (min-width: 600px) {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (max-width: 600px) {
+    padding: 10px;
+  }
 }
 
 .buttons {
   display: flex;
   position: relative;
+
+  @media (max-width: 600px) {
+    margin-top: 10px;
+  }
 }
 
 .button {
@@ -19,7 +30,6 @@
   display: flex;
   align-items: center;
   border-radius: 4px;
-  padding: 20px 0;
   font-size: 1.375rem;
   width: 240px;
   justify-content: center;
@@ -46,5 +56,13 @@
 
   svg {
     width: 25px;
+  }
+
+  @media (min-width: 600px) {
+    padding: 20px 0;
+  }
+
+  @media (max-width: 600px) {
+    padding: 10px 0;
   }
 }

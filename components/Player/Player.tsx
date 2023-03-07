@@ -69,7 +69,7 @@ const Player: FC<Props> = ({ light, dark }) => {
         {playing ? <PauseSvg fill={dark} /> : <PlaySvg fill={dark} />}
       </button>
       <div className={styles.content}>
-        <div className={styles.title}>{t.title}</div>
+        {t.title}
         <div className={styles.songName}>
           <SongSvg />
           {tracks[currentTrack]}
