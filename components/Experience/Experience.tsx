@@ -61,7 +61,7 @@ const Experience: FC = () => {
                   style={{ transform: `translateX(-${(slide - 1) * 100}%)` }}
                 >
                   <h3 className={styles.cardTitle}>{e.company}</h3>
-                  <p>{e.text}</p>
+                  <p className={styles.cardText}>{e.text}</p>
                 </div>
               ))}
             </div>

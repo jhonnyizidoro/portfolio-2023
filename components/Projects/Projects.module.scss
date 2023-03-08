@@ -1,3 +1,5 @@
+@import 'styles/mixins';
+
 $dark: #05262a;
 $light: #6ff0bb;
 
@@ -7,10 +9,6 @@ $light: #6ff0bb;
 }
 
 .wrapper {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  height: 100%;
   max-width: 95%;
   margin: auto;
 }
@@ -33,8 +31,6 @@ $light: #6ff0bb;
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
 }
 
 .card {
@@ -73,6 +69,23 @@ $light: #6ff0bb;
 .cardImage {
   border-radius: 3px;
   margin-right: 15px;
+}
+
+@include desktop {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+}
+
+@include mobile {
+  .wrapper {
+    padding: 50px 10px 10px;
+  }
+
+  .cards {
+    gap: 25px;
+  }
 }
 
 @keyframes slideInRight {

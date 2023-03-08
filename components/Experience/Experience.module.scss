@@ -1,3 +1,5 @@
+@import 'styles/mixins';
+
 $dark: #221918;
 $light: #de9934;
 
@@ -7,11 +9,6 @@ $light: #de9934;
 }
 
 .wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-grow: 1;
-
   // Animation
   animation: slideInRight 1s;
 }
@@ -22,7 +19,6 @@ $light: #de9934;
 }
 
 .title {
-  font-size: 3.125rem;
   color: $light;
   margin-bottom: 40px;
 }
@@ -50,10 +46,6 @@ $light: #de9934;
     fill: #c8c8c8;
     width: 25px;
   }
-}
-
-.carousel {
-  margin: 0 25px;
 }
 
 .subtitle {
@@ -101,6 +93,59 @@ $light: #de9934;
   width: 7px;
   height: 7px;
   background: white;
+}
+
+@include desktop {
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-grow: 1;
+  }
+
+  .title {
+    font-size: 3.125rem;
+  }
+
+  .carousel {
+    margin: 0 25px;
+  }
+}
+
+@include mobile {
+  .wrapper {
+    padding: 50px 15px;
+  }
+
+  .title {
+    font-size: 2.125rem;
+  }
+
+  .carouselWrapper {
+    margin-top: 40px;
+  }
+
+  .carousel {
+    min-width: 1px;
+  }
+
+  .carouselControl {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+
+    &:nth-child(1) {
+      left: -7px;
+    }
+
+    &:nth-child(3) {
+      right: -7px;
+    }
+  }
+
+  .cardText {
+    font-size: 0.9rem;
+  }
 }
 
 @keyframes slideInRight {
