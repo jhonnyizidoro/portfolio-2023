@@ -1,6 +1,13 @@
 import { useTranslation } from '@/hooks/translation'
 
-import { FC, useCallback, useRef, useState } from 'react'
+import {
+  ChangeEvent,
+  FC,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from 'react'
 
 import { PauseSvg, PlaySvg, SkipSvg, SongSvg } from '@/svg'
 
@@ -20,6 +27,20 @@ const Player: FC<Props> = ({ light, dark }) => {
   const [currentTrack, setCurrentTrack] = useState<number>(0)
   const [playing, setPlaying] = useState(false)
   const refs = useRef<(HTMLAudioElement | null)[]>([])
+
+  const handleVolume = useCallback((event?: ChangeEvent<HTMLInputElement>) => {
+    const volume = Number(event?.target.value || 50) / 100
+
+    refs.current.forEach((audio) => {
+      if (audio) {
+        audio.volume = volume
+      }
+    })
+  }, [])
+
+  useEffect(() => {
+    handleVolume()
+  }, [handleVolume])
 
   const handleNext = useCallback(() => {
     const nextTrack = currentTrack < tracks.length - 1 ? currentTrack + 1 : 0
@@ -83,6 +104,14 @@ const Player: FC<Props> = ({ light, dark }) => {
       >
         <SkipSvg />
       </button>
+      <input
+        type='range'
+        aria-label='Volume'
+        onChange={handleVolume}
+        className={styles.volume}
+        // @ts-ignore
+        style={{ '--dark': dark, '--light': light }}
+      />
     </div>
   )
 }

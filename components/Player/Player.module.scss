@@ -59,6 +59,28 @@
   .content {
     margin: 0 10px 0 20px;
   }
+
+  .volume {
+    appearance: none;
+    margin-left: 5px;
+    cursor: pointer;
+    background: transparent;
+
+    &::-webkit-slider-thumb {
+      appearance: none;
+      background: var(--light);
+      width: 16px;
+      height: 16px;
+      border-radius: 99px;
+      margin-top: -6px;
+    }
+
+    &::-webkit-slider-runnable-track {
+      background: var(--dark);
+      height: 5px;
+      border-radius: 99px;
+    }
+  }
 }
 
 @include mobile {
@@ -70,6 +92,10 @@
   .content {
     margin-left: 10px;
     flex-grow: 1;
+  }
+
+  .volume {
+    display: none;
   }
 }
 

@@ -30,6 +30,7 @@ const SEO: FC = () => {
       <meta name='twitter:description' content={t.description} />
       <meta name='twitter:image' content={ogImage} />
 
+      <link rel='icon' type='image/png' href='/fav/favicon-32x32.png' />
       <link
         rel='apple-touch-icon'
         sizes='180x180'
