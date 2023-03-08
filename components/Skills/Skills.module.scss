@@ -1,3 +1,5 @@
+@import 'styles/mixins';
+
 $dark: #1d0039;
 $light: #af44ff;
 
@@ -6,15 +8,7 @@ $light: #af44ff;
   light: $light;
 }
 
-.wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-grow: 1;
-}
-
 .card {
-  padding: 70px;
   backdrop-filter: blur(5px) brightness(125%);
   border-radius: 5px;
   overflow: hidden;
@@ -36,20 +30,17 @@ $light: #af44ff;
 
 .list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
   margin-bottom: 40px;
 }
 
 .listItem {
-  font-size: 1.125rem;
   backdrop-filter: blur(3px);
   background: linear-gradient(
     to bottom,
     rgba(255, 255, 255, 0.05),
     rgba(255, 255, 255, 0.02)
   );
-  padding: 15px;
+  padding: 15px 0;
   text-align: center;
   border-radius: 4px;
 
@@ -76,13 +67,14 @@ $light: #af44ff;
 }
 
 .detailedListWrapper {
-  position: absolute;
+  position: fixed;
   width: 650px;
+  max-width: 90%;
   backdrop-filter: brightness(0.9) blur(10px);
   border-radius: 5px;
-  padding: 50px 30px 30px;
   box-shadow: 0 0 20px 9999px rgba(black, 0.5);
   z-index: 2;
+  top: 50%;
 
   // Animation
   animation: slideUp 2s forwards cubic-bezier(0, 1, 0.44, 1);
@@ -104,7 +96,7 @@ $light: #af44ff;
 
 .detailedListOverflow {
   overflow: auto;
-  max-height: 70vh;
+  max-height: 75vh;
 
   &::-webkit-scrollbar {
     width: 3px;
@@ -129,7 +121,6 @@ $light: #af44ff;
 
 .detailedList {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   gap: 10px;
 }
 
@@ -138,6 +129,60 @@ $light: #af44ff;
   padding: 15px 0;
   text-align: center;
   border-radius: 4px;
+}
+
+@include desktop {
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-grow: 1;
+  }
+
+  .card {
+    padding: 70px;
+  }
+
+  .list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  .listItem {
+    font-size: 1.125rem;
+  }
+
+  .detailedListWrapper {
+    padding: 50px 30px 30px;
+  }
+
+  .detailedList {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@include mobile {
+  .wrapper {
+    padding: 50px 15px;
+  }
+
+  .card {
+    padding: 20px;
+    margin-bottom: 25px;
+  }
+
+  .list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .listItem {
+    font-size: 0.95rem;
+  }
+
+  .detailedListWrapper {
+    padding: 35px 15px 15px;
+  }
 }
 
 @keyframes slideDown {
@@ -153,11 +198,11 @@ $light: #af44ff;
 
 @keyframes slideUp {
   from {
-    transform: perspective(500px) rotateX(10deg) translateY(500px);
+    transform: perspective(500px) rotateX(10deg) translateY(-100%);
     opacity: 0;
   }
   to {
-    transform: perspective(500px) rotateX(4deg);
+    transform: perspective(500px) rotateX(4deg) translateY(-55%);
     opacity: 1;
   }
 }
