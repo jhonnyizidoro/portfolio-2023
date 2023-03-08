@@ -1,16 +1,23 @@
+@import 'styles/mixins';
+
 .section {
   width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   position: relative;
+  overflow: hidden;
+}
 
-  @media (min-width: 600px) {
+@include desktop {
+  .section {
     padding-top: 20px;
     padding-bottom: 133px;
   }
+}
 
-  @media (max-width: 600px) {
+@include mobile {
+  .section {
     padding-top: 10px;
     padding-bottom: 143px;
   }

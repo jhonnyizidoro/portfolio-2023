@@ -1,28 +1,15 @@
+@import 'styles/mixins';
+
 .wrapper {
   position: fixed;
   bottom: 0;
   width: 100%;
   backdrop-filter: brightness(85%) blur(5px);
-
-  @media (min-width: 600px) {
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  @media (max-width: 600px) {
-    padding: 10px;
-  }
 }
 
 .buttons {
   display: flex;
   position: relative;
-
-  @media (max-width: 600px) {
-    margin-top: 10px;
-  }
 }
 
 .button {
@@ -57,12 +44,31 @@
   svg {
     width: 25px;
   }
+}
 
-  @media (min-width: 600px) {
-    padding: 20px 0;
+@include desktop {
+  .wrapper {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
-  @media (max-width: 600px) {
+  .button {
+    padding: 20px 0;
+  }
+}
+
+@include mobile {
+  .wrapper {
+    padding: 10px;
+  }
+
+  .buttons {
+    margin-top: 10px;
+  }
+
+  .button {
     padding: 10px 0;
   }
 }
