@@ -15,7 +15,11 @@ import styles from './Player.module.scss'
 import enUs from './translations/en-US.json'
 import ptBr from './translations/pt-BR.json'
 
-const tracks = ['Filipe Ret - Invicto', 'Black Alien - Au Revoir']
+const tracks = [
+  'Bonobo - Kong',
+  'ProleteR - April Showers',
+  'General Elektriks - Raid The Radio',
+]
 
 interface Props {
   dark: string
@@ -77,6 +81,7 @@ const Player: FC<Props> = ({ light, dark }) => {
           key={t}
           src={`/songs/${t}.mp3`}
           preload='none'
+          onEnded={handleNext}
           ref={(el) => (refs.current[i] = el)}
         />
       ))}

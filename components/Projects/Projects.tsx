@@ -22,6 +22,7 @@ const Projects: FC = () => {
         <div>
           <h1 className={styles.title}>{t.title}</h1>
           <h2 className={styles.subtitle}>{t.subtitle}</h2>
+          <div className={styles.text}>{t.text}</div>
         </div>
         <div className={styles.cards}>
           {t.projects.map((p) => (
