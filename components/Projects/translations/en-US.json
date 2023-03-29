@@ -1,7 +1,7 @@
 {
   "title": "Projects",
   "subtitle": "Some of my projects as a freelancer",
-  "text": "Click on some project to see more details",
+  "text": "Click on a project to see more details",
   "linkLabel": "Open the project image",
   "projects": [
     {
@@ -13,7 +13,7 @@
     {
       "id": "casamento",
       "name": "Jeny & Leo",
-      "text": "Marriage site with an integrated store to buy gifts",
+      "text": "Marriage site with an integrated store",
       "items": ["Design", "Develop"]
     },
     {

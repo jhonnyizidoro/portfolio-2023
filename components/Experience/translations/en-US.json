@@ -1,6 +1,6 @@
 {
   "title": "Leading a team",
-  "text": "For the last year I've been in the World Pulse project as a tech lead. My role, in addition to being a developer, is to make technical decisions, lead the meetings to plan the sprints, distribute the issues among the developers, estimate the issues and deploy hotfixes and sprints. Also, on this project, I had the responsibility of setting up the project from scratch, from the server to the database.",
+  "text": "For the last year I've been working at World Pulse as a tech lead. My role, in addition to being a developer, is to make technical decisions, lead the meetings to plan the sprints, distribute the issues among the developers, estimate the issues and deploy hotfixes and sprints. Also, on this project, I had the responsibility of setting up the project from scratch, from the server to the database.",
   "subtitle": "My experience as a developer",
   "previousButtonLabel": "Show previous slide",
   "nextButtonLabel": "Show next slide",
@@ -11,7 +11,7 @@
     },
     {
       "company": "E-completo",
-      "text": "I worked on this project for 3 years, building from scratch a multi-tenant application for car dealers. We had more than 150 sites running. On this project I learned how to reach 100% on Google Lighthouse metrics: SEO, Performance, Accessibility, Best Practices and Progressive Web App. Our sites were all indexed on Google's first page, and also I was responsible for doing all the designs as well. The software was built using Lavavel + MariaDB on the backend, and a Node server with Express consuming the API."
+      "text": "I worked on this project for 3 years, building from scratch a multi-tenant application for car dealers. We had more than 150 sites running. On this project I learned how to reach 100% on Google Lighthouse metrics: SEO, Performance, Accessibility, Best Practices and Progressive Web App. Our sites were all indexed on Google's first page, and also I was responsible for doing all the designs. The software was built using Lavavel + MariaDB on the backend, and a Node server with Express consuming the API."
     },
     {
       "company": "Freelancer",

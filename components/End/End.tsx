@@ -48,7 +48,12 @@ const End: FC = () => {
             </Link>
           </div>
         </div>
-        <small className={styles.textSmall}>{t.phone}</small>
+        <Link href='tel:+5541991791053' className={styles.textSmall}>
+          {t.phone}
+        </Link>
+        <Link href='mailto:jhonny-cwb@hotmail.com' className={styles.textSmall}>
+          E-mail: jhonny-cwb@hotmail.com
+        </Link>
       </div>
     </>
   )

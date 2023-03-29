@@ -1,3 +1,5 @@
+@import 'styles/mixins';
+
 $dark: #140000;
 $light: #c80c00;
 
@@ -7,10 +9,6 @@ $light: #c80c00;
 }
 
 .content {
-  position: absolute;
-  right: 50%;
-  top: 50%;
-  transform: translate(50%, -50%);
   text-align: center;
 }
 
@@ -88,6 +86,10 @@ $light: #c80c00;
   font-size: 0.875rem;
   display: block;
 
+  &:nth-child(5) {
+    margin-bottom: 5px;
+  }
+
   // Animation
   opacity: 0;
   animation: slideDown 0.85s 0.8s forwards;
@@ -101,5 +103,17 @@ $light: #c80c00;
   }
   to {
     opacity: 1;
+  }
+}
+
+@include desktop {
+  .content {
+    margin: auto;
+  }
+}
+
+@include mobile {
+  .content {
+    margin: auto 15px;
   }
 }
