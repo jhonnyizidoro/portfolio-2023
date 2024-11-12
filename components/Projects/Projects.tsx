@@ -21,7 +21,7 @@ const Projects: FC = () => {
       <div className={styles.wrapper}>
         <div>
           <h1 className={styles.title}>{t.title}</h1>
-          <h2 className={styles.subtitle}>{t.subtitle}</h2>
+          <h2>{t.subtitle}</h2>
           <div className={styles.text}>{t.text}</div>
         </div>
         <div className={styles.cards}>
@@ -34,24 +34,17 @@ const Projects: FC = () => {
               aria-label={`${t.linkLabel} ${p.name}`}
             >
               <Background image={cardBackground} opacity={0.11} />
-              <h3 className={styles.cardTitle}>{p.name}</h3>
-              <p className={styles.cardSubtitle}>{p.text}</p>
-              <div className={styles.cardFooter}>
-                <Image
-                  src={`/images/projects/${p.id}-m.jpg`}
-                  alt=''
-                  className={styles.cardImage}
-                  width={150}
-                  height={100}
-                  quality={50}
-                />
-                <ul className={styles.cardList}>
-                  {p.items.map((i) => (
-                    <li key={`${i}-${p.id}`} className={styles.cardListItem}>
-                      - {i}
-                    </li>
-                  ))}
-                </ul>
+              <Image
+                src={`/images/projects/${p.id}-m.jpg`}
+                alt=''
+                className={styles.cardImage}
+                width={150}
+                height={100}
+                quality={50}
+              />
+              <div>
+                <h3 className={styles.cardTitle}>{p.name}</h3>
+                <p className={styles.cardSubtitle}>{p.text}</p>
               </div>
             </Link>
           ))}

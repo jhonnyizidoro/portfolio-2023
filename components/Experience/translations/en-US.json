@@ -1,13 +1,17 @@
 {
   "title": "Leading a team",
-  "text": "For the last year I've been working at World Pulse as a tech lead. My role, in addition to being a developer, is to make technical decisions, lead the meetings to plan the sprints, distribute the issues among the developers, estimate the issues and deploy hotfixes and sprints. Also, on this project, I had the responsibility of setting up the project from scratch, from the server to the database.",
+  "text": "For the last year I've been working at World Pulse as a tech lead. My role, in addition to being a developer, is to make technical decisions, lead the meetings to plan the sprints, distribute the issues among the developers, estimate the issues and deploy hotfixes and sprints. Also, on this project, I had the responsibility of setting up the project from scratch, from the infrastructure to the UI.",
   "subtitle": "My experience as a developer",
   "previousButtonLabel": "Show previous slide",
   "nextButtonLabel": "Show next slide",
   "experiences": [
     {
+      "company": "World Pulse",
+      "text": "World Pulse is an NGO organization located in Portland (US). Here I worked as a Tech Lead building the app from scratch. My role was to decide which technologies to use and also manage the board, describing and assigning issues, reviewing PRs and releasing new versions. The technologies chosen are: Directus (NodeJS CMS), Strapi, Postgres, GraphQL, NextJS and others. All the infrastructure was configured by me."
+    },
+    {
       "company": "Globo",
-      "text": "Globo is the biggest TV channel in Brazil. I worked in their smart TV app: Globoplay, which has millions of users. This project was very challenging, develop using React for Smart TVs requires a lot of attention on performance and support across multiple manufactures. The app was built using React and the build process was very complex."
+      "text": "Globo is the most popular TV channel in Brazil. I worked in their smart TV app: Globoplay, which has millions of users. This project was very challenging, develop using React for Smart TVs requires a lot of attention on performance and support across multiple manufactures. The app was built using React and the build process was very complex."
     },
     {
       "company": "E-completo",

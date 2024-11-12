@@ -45,9 +45,9 @@ $light: #6ff0bb;
 .card {
   backdrop-filter: brightness(135%);
   border-radius: 5px;
-  overflow: hidden;
   padding: 20px;
-  position: relative;
+  display: flex;
+  align-items: center;
 
   // Animation
   animation: slideInRight 0.5s forwards;
@@ -55,7 +55,8 @@ $light: #6ff0bb;
 
   @for $i from 1 through 3 {
     &:nth-child(#{$i}),
-    &:nth-child(#{$i + 3}) {
+    &:nth-child(#{$i + 3}),
+    &:nth-child(#{$i + 6}) {
       animation-delay: #{$i / 10}s;
     }
   }
@@ -64,15 +65,6 @@ $light: #6ff0bb;
 .cardTitle {
   font-size: 1.25rem;
   color: white;
-}
-
-.cardSubtitle {
-  margin-bottom: 20px;
-}
-
-.cardFooter {
-  display: flex;
-  align-items: center;
 }
 
 .cardImage {

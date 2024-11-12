@@ -35,6 +35,8 @@ $light: #c80c00;
   // Animation
   opacity: 0;
   animation: slideDown 0.85s 0.4s forwards;
+  max-width: 300px;
+  margin: auto;
 }
 
 .buttons {

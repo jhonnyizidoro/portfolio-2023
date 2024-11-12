@@ -1,10 +1,14 @@
 {
   "title": "Liderando um time",
-  "text": "No último ano eu tenho trabalhado na World Pulse como tech lead. My função, além de desenvolvedor, é de tomar decisões técnicas, liderar as reuniões de planejamento de sprints, distribuir as tasks entre os desenvolvedores, estimar as tasks e fazer os deploys e correções e funcionalidades. Além disso, nesse projeto, fiquei encarregado de configurar o projeto desde o começo, do banco de dados ao servidor.",
+  "text": "No último ano eu tenho trabalhado na World Pulse como tech lead. My função, além de desenvolvedor, é de tomar decisões técnicas, liderar as reuniões de planejamento de sprints, distribuir as tasks entre os desenvolvedores, estimar as tasks e fazer os deploys e correções e funcionalidades. Além disso, nesse projeto, fiquei encarregado de configurar o projeto desde o começo, da infraestrutura à UI.",
   "subtitle": "Minhas experiências",
   "previousButtonLabel": "Mostrar slide anterior",
   "nextButtonLabel": "Mostrar próximo slide",
   "experiences": [
+    {
+      "company": "World Pulse",
+      "text": "World Pulse é uma ONG localizada em Portland (EUA). Aqui trabalhei como líder técnico construindo o aplicativo do zero. Minha função era decidir quais tecnologias utilizar e também gerenciar a diretoria, descrevendo e atribuindo assuntos, revisando PRs e lançando novas versões. As tecnologias escolhidas são: Directus (NodeJS CMS), Strapi, Postgres, GraphQL, NextJS e outras. Toda a infraestrutura foi configurada por mim."
+    },
     {
       "company": "Globo",
       "text": "Com a Globo sendo o maior canal de TV do Brasil, eu trabalhei na equipe da Globoplay, que tem milhões de usuários simultâneos. Esse projeto foi muito desafiador, desenvolver para Smart TVs requer muita atenção em performance e suporte para uma grande variedade de fabricantes. O app foi feito usando React e o processo de build era muito complexo."

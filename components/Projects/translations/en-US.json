@@ -5,40 +5,49 @@
   "linkLabel": "Open the project image",
   "projects": [
     {
+      "id": "sobatidos",
+      "name": "Só Batidos",
+      "text": "Crashed car sell website"
+    },
+    {
+      "id": "radargestao",
+      "name": "Radar Gestão",
+      "text": "Lawyer company website"
+    },
+    {
       "id": "7place",
       "name": "7Place",
-      "text": "Premium vehicles store",
-      "items": ["Design", "Develop"]
+      "text": "Premium vehicles store"
     },
     {
       "id": "casamento",
       "name": "Jeny & Leo",
-      "text": "Marriage site with an integrated store",
-      "items": ["Design", "Develop"]
+      "text": "Marriage site with an integrated store"
     },
     {
       "id": "montserrat",
       "name": "Montserrat Wine Experience",
-      "text": "Premium wine store",
-      "items": ["Design", "Develop"]
+      "text": "Premium wine store"
+    },
+    {
+      "id": "worldpulse",
+      "name": "World Pulse",
+      "text": "Social network for woman"
     },
     {
       "id": "recife",
       "name": "Cars Recife",
-      "text": "Brazilian ad portal to sell vehicles",
-      "items": ["Design", "Develop"]
+      "text": "Brazilian ad portal to sell vehicles"
     },
     {
       "id": "reservas",
       "name": "Sierra de Albarracin",
-      "text": "Hotel booking website like AirBnb",
-      "items": ["Design"]
+      "text": "Hotel booking website like AirBnb"
     },
     {
       "id": "shiftcar",
       "name": "ShiftCar",
-      "text": "Premium vehicles store",
-      "items": ["Design", "Develop"]
+      "text": "Premium vehicles store"
     }
   ]
 }

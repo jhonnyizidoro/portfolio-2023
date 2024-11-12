@@ -49,7 +49,7 @@ const Introduction: FC = () => {
         }
       }
     }, 50)
-  }, [])
+  }, [t.subtitles])
 
   useEffect(() => {
     const interval = handleSubtitle()

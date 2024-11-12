@@ -5,40 +5,49 @@
   "linkLabel": "Abrir imagem do projeto",
   "projects": [
     {
+      "id": "sobatidos",
+      "name": "Só Batidos",
+      "text": "Portal de venda de veículos batidos"
+    },
+    {
+      "id": "radargestao",
+      "name": "Radar Gestão",
+      "text": "Site de escritório de advocacia"
+    },
+    {
       "id": "7place",
       "name": "7Place",
-      "text": "Loja de veículos premium",
-      "items": ["Design", "Develop"]
+      "text": "Loja de veículos premium"
     },
     {
       "id": "casamento",
       "name": "Jeny & Leo",
-      "text": "Site de casamento uma loja integrada",
-      "items": ["Design", "Develop"]
+      "text": "Site de casamento uma loja integrada"
     },
     {
       "id": "montserrat",
       "name": "Montserrat Wine Experience",
-      "text": "Loja de vinho premium",
-      "items": ["Design", "Develop"]
+      "text": "Loja de vinho premium"
+    },
+    {
+      "id": "worldpulse",
+      "name": "World Pulse",
+      "text": "Rede social para mulheres"
     },
     {
       "id": "recife",
       "name": "Cars Recife",
-      "text": "Portal de venda de veículos",
-      "items": ["Design", "Develop"]
+      "text": "Portal de venda de veículos"
     },
     {
       "id": "reservas",
       "name": "Sierra de Albarracin",
-      "text": "Site de reservas estilo AirBnb",
-      "items": ["Design"]
+      "text": "Site de reservas estilo AirBnb"
     },
     {
       "id": "shiftcar",
       "name": "ShiftCar",
-      "text": "Loja de veículos premium",
-      "items": ["Design", "Develop"]
+      "text": "Loja de veículos premium"
     }
   ]
 }
