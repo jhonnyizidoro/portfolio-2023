@@ -29,6 +29,9 @@ const detailedList = [
     list: [
       'React',
       'NextJS',
+      'Typescript',
+      'React Query',
+      'tRPC',
       'Vue',
       'HTML',
       'CSS / Sass',
