@@ -6,6 +6,10 @@
   "nextButtonLabel": "Show next slide",
   "experiences": [
     {
+      "company": "Fox Corporation",
+      "text": "I worked as a senior frontend engineer at Fox developing smart TV applications using Remix + React Router 7. In this temporary project, I developed the application from start to finish, providing support for Tizen, WebOS, Vizio, and Comcast TVs."
+    },
+    {
       "company": "World Pulse",
       "text": "World Pulse is an NGO organization located in Portland (US). Here I worked as a Tech Lead building the app from scratch. My role was to decide which technologies to use and also manage the board, describing and assigning issues, reviewing PRs and releasing new versions. The technologies chosen are: Directus (NodeJS CMS), Strapi, Postgres, GraphQL, NextJS and others. All the infrastructure was configured by me."
     },

@@ -1,5 +1,5 @@
 import Image, { StaticImageData } from 'next/image'
-import { FC } from 'react'
+import { FC, useState } from 'react'
 
 import styles from './Background.module.scss'
 
@@ -8,15 +8,21 @@ interface Props {
   opacity: number
 }
 
-const Background: FC<Props> = ({ image, opacity }) => (
-  <Image
-    priority
-    src={image}
-    alt=''
-    className={styles.background}
-    style={{ opacity }}
-    quality={50}
-  />
-)
+const Background: FC<Props> = ({ image, opacity }) => {
+  const [loaded, setLoaded] = useState(false)
+
+  return (
+    <Image
+      priority
+      src={image}
+      alt=''
+      onLoad={() => setLoaded(true)}
+      className={styles.background}
+      style={{ opacity: loaded ? opacity : 0 }}
+      quality={50}
+      data-loaded={loaded}
+    />
+  )
+}
 
 export default Background

@@ -8,4 +8,14 @@
   object-fit: cover;
   pointer-events: none;
   display: block;
+  transition: 0.7s;
+
+  &[data-loaded='false'] {
+    opacity: 0;
+    filter: blur(6px);
+  }
+
+  &[data-loaded='true'] {
+    opacity: 0;
+  }
 }
