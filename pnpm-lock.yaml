@@ -17,6 +17,9 @@ importers:
       '@types/react-dom':
         specifier: 18.0.11
         version: 18.0.11
+      '@vercel/analytics':
+        specifier: ^0.1.11
+        version: 0.1.11(react@18.2.0)
       eslint:
         specifier: 8.35.0
         version: 8.35.0
@@ -497,6 +500,11 @@ packages:
     resolution: {integrity: sha512-lrW200hZdbfRtztbygyaq/6jP6AKE8qQN2KvPcJ+x7wiD038YtnYtZ82IMNJ69GJibV7bwL3y9FgK+5w/pYt6g==}
     cpu: [x64]
     os: [win32]
+
+  '@vercel/analytics@0.1.11':
+    resolution: {integrity: sha512-mj5CPR02y0BRs1tN3oZcBNAX9a8NxsIUl9vElDPcqxnMfP0RbRc9fI9Ud7+QDg/1Izvt5uMumsr+6YsmVHcyuw==}
+    peerDependencies:
+      react: ^16.8||^17||^18
 
   acorn-jsx@5.3.2:
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
@@ -2085,6 +2093,10 @@ snapshots:
 
   '@unrs/resolver-binding-win32-x64-msvc@1.11.1':
     optional: true
+
+  '@vercel/analytics@0.1.11(react@18.2.0)':
+    dependencies:
+      react: 18.2.0
 
   acorn-jsx@5.3.2(acorn@8.15.0):
     dependencies:
