@@ -59,6 +59,22 @@ const Experience: FC = () => {
                 >
                   <h3 className={styles.cardTitle}>{e.company}</h3>
                   <p className={styles.cardText}>{e.text}</p>
+                  <ul className={styles.stack}>
+                    <li className={`${styles.stackItem} ${styles.stackTitle}`}>
+                      <strong>{t.stack}:</strong>
+                    </li>
+                    {e.stack.map((s, i) => (
+                      <li
+                        className={styles.stackItem}
+                        key={`${e.company}_${i}`}
+                      >
+                        {s}
+                        {i !== e.stack.length - 1 && (
+                          <span aria-hidden='true'>,</span>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               ))}
             </div>

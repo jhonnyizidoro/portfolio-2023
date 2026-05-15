@@ -91,6 +91,24 @@
   flex-shrink: 0;
 }
 
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 15px;
+}
+
+.stackItem {
+  font-size: 13px;
+  line-height: 1;
+  font-style: italic;
+}
+
+.stackTitle {
+  font-weight: bold;
+  font-style: normal;
+}
+
 @include desktop {
   .wrapper {
     display: flex;

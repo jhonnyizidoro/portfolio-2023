@@ -1,33 +1,111 @@
 {
-  "title": "Liderando um time",
-  "text": "No último ano eu tenho trabalhado na World Pulse como tech lead. My função, além de desenvolvedor, é de tomar decisões técnicas, liderar as reuniões de planejamento de sprints, distribuir as tasks entre os desenvolvedores, estimar as tasks e fazer os deploys e correções e funcionalidades. Além disso, nesse projeto, fiquei encarregado de configurar o projeto desde o começo, da infraestrutura à UI.",
+  "title": "Minhas Experiências",
+  "text": "Ao longo dos anos trabalhei em ambientes bem diferentes — ONGs, fintechs, grandes empresas de mídia, corporações americanas e como freelancer. Alguns papéis eram sobre liderar times e tomar decisões técnicas, outros sobre entregar rápido como contribuidor individual. Essa variedade me forçou a me adaptar constantemente, e foi provavelmente onde mais cresci.",
   "subtitle": "Minhas experiências",
   "previousButtonLabel": "Mostrar slide anterior",
   "nextButtonLabel": "Mostrar próximo slide",
+  "stack": "Tecnologias",
   "experiences": [
     {
-      "company": "For Corporation",
-      "text": "Trabalhei como engenheiro frontend senior na Fox desenvolvendo aplicativos para smart TV utilizando Remix + React Router 7. Nesse projeto temporário que trabalhei desenvolvi o aplicativo do início ao fim, dando suporte para TVs Tizen, WebOS, Vizio e Comcast."
-    },
-    {
-      "company": "World Pulse",
-      "text": "World Pulse é uma ONG localizada em Portland (EUA). Aqui trabalhei como líder técnico construindo o aplicativo do zero. Minha função era decidir quais tecnologias utilizar e também gerenciar a diretoria, descrevendo e atribuindo assuntos, revisando PRs e lançando novas versões. As tecnologias escolhidas são: Directus (NodeJS CMS), Strapi, Postgres, GraphQL, NextJS e outras. Toda a infraestrutura foi configurada por mim."
+      "company": "Fox Corporation",
+      "text": "Na Fox trabalhei como engenheiro frontend sênior em um app de streaming para smart TVs, construído com Remix e React Router 7. Entrei para levar o projeto do zero ao lançamento — cuidando da arquitetura, implementação e suporte multiplataforma em TVs Tizen, WebOS, Vizio e Comcast. Também integrei ferramentas de IA ao fluxo de desenvolvimento para acelerar as partes mais repetitivas do projeto.",
+      "stack": [
+        "Remix",
+        "React Router 7",
+        "Tailwind",
+        "Firebase",
+        "Tizen",
+        "WebOS",
+        "Vizio",
+        "Comcast",
+        "Vite",
+        "Vitest",
+        "React Testing Library"
+      ]
     },
     {
       "company": "Globo",
-      "text": "Com a Globo sendo o maior canal de TV do Brasil, eu trabalhei na equipe da Globoplay, que tem milhões de usuários simultâneos. Esse projeto foi muito desafiador, desenvolver para Smart TVs requer muita atenção em performance e suporte para uma grande variedade de fabricantes. O app foi feito usando React e o processo de build era muito complexo."
+      "text": "O Globoplay é a plataforma de streaming da Globo, maior emissora do Brasil, com milhões de usuários ativos. Desenvolver para Smart TVs me forçou a pensar diferente sobre performance — as restrições são reais e a tolerância para travamentos é zero. Gerenciar a compatibilidade entre fabricantes diferentes sem abrir mão da fluidez foi um dos maiores desafios técnicos que já enfrentei.",
+      "stack": [
+        "ReactJS",
+        "Node",
+        "GraphQL",
+        "Canvas Web API",
+        "WebOS",
+        "Tizen",
+        "WCAG"
+      ]
+    },
+    {
+      "company": "Vizabli",
+      "text": "Contrato de curto prazo para modernizar uma série de microsserviços — mas o escopo acabou sendo bem maior do que o esperado. Fiz a migração de um codebase de 10 anos do Node.js 12 para o 24 e do MongoDB 4 para o 8, refatorei para rodar em ambientes Docker modernos e migrei o controle de versão e pacotes do AWS CodeArtifact para o GitHub. Também automatizei os fluxos de deploy com GitHub Actions e usei ferramentas de IA ao longo do processo para avançar mais rápido nas partes mais trabalhosas da migração.",
+      "stack": [
+        "Node",
+        "React",
+        "CI/CD",
+        "GitHub Actions",
+        "Vite",
+        "Styled Components",
+        "CSS Modules",
+        "AWS ECR",
+        "AWS S3",
+        "AWS EC2",
+        "AWS CodeArtifact",
+        "MongoDB",
+        "Redux",
+        "Zustand",
+        "Redis"
+      ]
+    },
+    {
+      "company": "World Pulse",
+      "text": "World Pulse é uma ONG baseada em Portland, Oregon. Entrei como tech lead e fui responsável por tudo — escolha das tecnologias, configuração da infraestrutura e gestão do time no dia a dia. Construímos a plataforma do zero com NextJS, GraphQL, Directus, Postgres e Strapi. Além da parte técnica, conduzi os planejamentos de sprint, revisei PRs e cuidei de todos os releases.",
+      "stack": [
+        "NextJS",
+        "Node",
+        "GraphQL",
+        "Directus",
+        "Postgres",
+        "Strapi",
+        "AWS RDS",
+        "AWS EC2",
+        "AWS S3",
+        "CI/CD",
+        "GitHub Actions"
+      ]
     },
     {
       "company": "E-completo",
-      "text": "eu trabalhei nesse projeto por 3 anos, construindo do 0 um sistema multi-tenant para revendas de carros. Tínhamos mais de 150 sites rodando. Nesse projeto foi onde eu aprendi como alcançar 100% nas métricas do Google Lighthouse: SEO, Performance, Acessibilidade, Melhores Práticas e PWA. Todos os nossos sites estavam indexados na primeira página do Google, eu eu também era responsável por fazer o design dos sites. O sistema foi construído utilizando Laravel + MariaDB no backend, e um servidor com Node + Express consumindo a API."
+      "text": "Três anos construindo uma plataforma multi-tenant para revendas de carros do zero. No pico, tínhamos mais de 150 sites rodando nela. Foi aqui que levei a sério o tema de performance web — cada site bateu 100% no Google Lighthouse em todas as categorias, e todos ficavam na primeira página do Google. Cuidei da stack inteira: Laravel e MariaDB no backend, Node e Express na camada de API, e todos os designs também.",
+      "stack": ["Node", "Express", "React", "SQL", "MongoDB"]
     },
     {
       "company": "Freelancer",
-      "text": "Eu trabalhe por anos como freelancer, e ainda trabalho. Eu aprendi muito trabalhando em uma grande variedade de projetos, e também desenvolvi muitos projetos do zero usando os mais variados tipos de tecnologia, como React, Node, PHP e etc. Eu adicionei alguns exemplos na próxima etapa."
+      "text": "Trabalhar como freelancer me ensinou a me adaptar rápido. Construí de tudo — desde landing pages até aplicações completas, geralmente trabalhando sozinho em toda a stack. Foi onde aprendi a entregar com agilidade, tomar decisões práticas e me comunicar bem com clientes não técnicos.",
+      "stack": [
+        "Node",
+        "Express",
+        "PHP",
+        "React",
+        "Vue",
+        "NextJS",
+        "GraphQL",
+        "SQL",
+        "MongoDB"
+      ]
     },
     {
       "company": "Banco Bari",
-      "text": "O Banco Bari é um banco digital onde eu e meu time desenvolvemos o site deles em 2019 utilizando NextJS. Era uma das primeiras versões do NextJS, e sua popularidade não chegava nem perto do que é hoje."
+      "text": "Em 2019, meu time construiu o site do Banco Bari usando NextJS — um dos primeiros projetos que fazíamos com o framework. Na época era algo bastante nichado e a comunidade ainda era pequena. Foi uma aposta antecipada que valeu a pena.",
+      "stack": [
+        "NextJS",
+        "Node",
+        "GraphQL",
+        "Directus",
+        "Postgres",
+        "Strapi",
+        "CI/CD"
+      ]
     }
   ]
 }
