@@ -1,53 +1,59 @@
 {
   "title": "Projects",
-  "subtitle": "Some of my projects as a freelancer",
+  "subtitle": "Some of the projects I built",
   "text": "Click on a project to see more details",
   "linkLabel": "Open the project image",
+  "repositoriesTitle": "My Open Source repositories",
+  "repositories": [
+    {
+      "url": "https://github.com/jhonnyizidoro/strapi-generate-types",
+      "description": "Generates TypeScript interfaces from Strapi V5 schemas automatically"
+    },
+    {
+      "url": "https://github.com/jhonnyizidoro/portfolio-2023",
+      "description": "Personal software engineer portfolio showcasing experience and skills"
+    },
+    {
+      "url": "https://github.com/jhonnyizidoro/marriage",
+      "description": "Personal wedding website with guest RSVPs and song requests"
+    }
+  ],
   "projects": [
     {
-      "id": "sobatidos",
-      "name": "Só Batidos",
-      "text": "Crashed car sell website"
-    },
-    {
-      "id": "radargestao",
-      "name": "Radar Gestão",
-      "text": "Lawyer company website"
-    },
-    {
-      "id": "7place",
-      "name": "7Place",
-      "text": "Premium vehicles store"
-    },
-    {
-      "id": "casamento",
-      "name": "Jeny & Leo",
-      "text": "Marriage site with an integrated store"
-    },
-    {
-      "id": "montserrat",
-      "name": "Montserrat Wine Experience",
-      "text": "Premium wine store"
+      "id": "fox",
+      "name": "Fox Corporation",
+      "text": "Local news smart TV streaming app, 24/7 coverage",
+      "url": "https://www.foxlocal.com/"
     },
     {
       "id": "worldpulse",
       "name": "World Pulse",
-      "text": "Social network for woman"
+      "text": "Social network connecting women worldwide for change",
+      "url": "https://www.worldpulse.org"
     },
     {
-      "id": "recife",
-      "name": "Cars Recife",
-      "text": "Brazilian ad portal to sell vehicles"
+      "id": "globoplay",
+      "name": "GloboPlay",
+      "text": "Brazil's leading streaming platform by Globo TV",
+      "url": "https://globoplay.globo.com/"
     },
     {
-      "id": "reservas",
-      "name": "Sierra de Albarracin",
-      "text": "Hotel booking website like AirBnb"
+      "id": "radargestao",
+      "name": "Radar Gestão",
+      "text": "Brazilian legal management consulting and recruitment firm",
+      "url": "https://radardagestao.com.br/"
+    },
+    {
+      "id": "sevenplace",
+      "name": "7Place",
+      "text": "Premium new and used vehicles dealership in Curitiba",
+      "url": "https://www.7place.com.br/"
     },
     {
       "id": "shiftcar",
       "name": "ShiftCar",
-      "text": "Premium vehicles store"
+      "text": "Luxury and super sports vehicles dealership in Curitiba",
+      "url": "https://www.shiftcar.com.br/"
     }
   ]
 }

@@ -5,13 +5,28 @@ import Link from 'next/link'
 import { FC } from 'react'
 
 import styles from './Projects.module.scss'
+import SevenPlaceImage from './images/7place.png'
 import background from './images/background.jpg'
 import cardBackground from './images/card-background.jpg'
+import FoxImage from './images/fox.png'
+import GloboplayImage from './images/globoplay.png'
+import RadarGestaoImage from './images/radargestao.png'
+import ShiftCarImage from './images/shiftcar.png'
+import WorldpulseImage from './images/worldpulse.png'
 import enUs from './translations/en-US.json'
 import ptBr from './translations/pt-BR.json'
 
 import Background from '@/components/Background/Background'
 import Section from '@/components/Section/Section'
+
+const images = {
+  worldpulse: WorldpulseImage,
+  globoplay: GloboplayImage,
+  fox: FoxImage,
+  sevenplace: SevenPlaceImage,
+  shiftcar: ShiftCarImage,
+  radargestao: RadarGestaoImage,
+}
 
 const Projects: FC = () => {
   const { t } = useTranslation({ ptBr, enUs })
@@ -30,7 +45,7 @@ const Projects: FC = () => {
             <Link
               key={p.id}
               className={styles.card}
-              href={`/images/projects/${p.id}.jpg`}
+              href={p.url}
               target='_blank'
               aria-label={`${t.linkLabel} ${p.name}`}
             >
@@ -40,7 +55,7 @@ const Projects: FC = () => {
                 sizes='(max-width: 768px) 95vw, 500px'
               />
               <Image
-                src={`/images/projects/${p.id}-m.jpg`}
+                src={images[p.id as keyof typeof images]}
                 alt=''
                 className={styles.cardImage}
                 width={150}
@@ -51,6 +66,21 @@ const Projects: FC = () => {
                 <h3 className={styles.cardTitle}>{p.name}</h3>
                 <p className={styles.cardSubtitle}>{p.text}</p>
               </div>
+            </Link>
+          ))}
+        </div>
+
+        <h3 className={styles.repositoriesTitle}>{t.repositoriesTitle}</h3>
+        <div className={styles.repositories}>
+          {ptBr.repositories.map((r) => (
+            <Link
+              href={r.url}
+              key={r.url}
+              target='_blank'
+              className={styles.card}
+              data-centered
+            >
+              {r.url.split('/').pop()}
             </Link>
           ))}
         </div>

@@ -1,53 +1,59 @@
 {
   "title": "Projetos",
-  "subtitle": "Alguns de meus projetos como freelancer",
+  "subtitle": "Alguns dos projetos que contruí",
   "text": "Clique em um projeto para ver mais detalhes",
   "linkLabel": "Abrir imagem do projeto",
+  "repositoriesTitle": "Meus repositórios Open Source",
+  "repositories": [
+    {
+      "url": "https://github.com/jhonnyizidoro/strapi-generate-types",
+      "description": "Gera interfaces TypeScript a partir de schemas do Strapi V5"
+    },
+    {
+      "url": "https://github.com/jhonnyizidoro/portfolio-2023",
+      "description": "Site de portfólio pessoal com experiências e habilidades"
+    },
+    {
+      "url": "https://github.com/jhonnyizidoro/marriage",
+      "description": "Site de casamento com confirmação de presença e pedidos de música"
+    }
+  ],
   "projects": [
     {
-      "id": "sobatidos",
-      "name": "Só Batidos",
-      "text": "Portal de venda de veículos batidos"
-    },
-    {
-      "id": "radargestao",
-      "name": "Radar Gestão",
-      "text": "Site de escritório de advocacia"
-    },
-    {
-      "id": "7place",
-      "name": "7Place",
-      "text": "Loja de veículos premium"
-    },
-    {
-      "id": "casamento",
-      "name": "Jeny & Leo",
-      "text": "Site de casamento uma loja integrada"
-    },
-    {
-      "id": "montserrat",
-      "name": "Montserrat Wine Experience",
-      "text": "Loja de vinho premium"
+      "id": "fox",
+      "name": "Fox Corporation",
+      "text": "App de streaming para smart TV com notícias locais, 24/7",
+      "url": "https://www.foxlocal.com/"
     },
     {
       "id": "worldpulse",
       "name": "World Pulse",
-      "text": "Rede social para mulheres"
+      "text": "Rede social conectando mulheres do mundo todo",
+      "url": "https://www.worldpulse.org"
     },
     {
-      "id": "recife",
-      "name": "Cars Recife",
-      "text": "Portal de venda de veículos"
+      "id": "globoplay",
+      "name": "GloboPlay",
+      "text": "Maior plataforma de streaming do Brasil, da Globo",
+      "url": "https://globoplay.globo.com/"
     },
     {
-      "id": "reservas",
-      "name": "Sierra de Albarracin",
-      "text": "Site de reservas estilo AirBnb"
+      "id": "radargestao",
+      "name": "Radar Gestão",
+      "text": "Consultoria jurídica e empresa de recrutamento brasileira",
+      "url": "https://radardagestao.com.br/"
+    },
+    {
+      "id": "sevenplace",
+      "name": "7Place",
+      "text": "Loja de veículos novos e usados premium em Curitiba",
+      "url": "https://www.7place.com.br/"
     },
     {
       "id": "shiftcar",
       "name": "ShiftCar",
-      "text": "Loja de veículos premium"
+      "text": "Loja de veículos de luxo e super esportivos em Curitiba",
+      "url": "https://www.shiftcar.com.br/"
     }
   ]
 }
