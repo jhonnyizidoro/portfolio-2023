@@ -1,4 +1,4 @@
-@import 'styles/mixins';
+@use 'mixins' as *;
 
 .wrapper {
   display: flex;
@@ -13,9 +13,11 @@
   border: 0;
   transition: 0.35s;
   flex-shrink: 0;
+  background-color: var(--light);
 
   svg {
     width: 24px;
+    fill: var(--dark);
   }
 }
 

@@ -6,16 +6,19 @@ import styles from './Background.module.scss'
 interface Props {
   image: StaticImageData
   opacity: number
+  sizes?: string
 }
 
-const Background: FC<Props> = ({ image, opacity }) => {
+const Background: FC<Props> = ({ image, opacity, sizes }) => {
   const [loaded, setLoaded] = useState(false)
 
   return (
     <Image
+      fill
       priority
       src={image}
       alt=''
+      sizes={sizes ?? '100vw'}
       onLoad={() => setLoaded(true)}
       className={styles.background}
       style={{ opacity: loaded ? opacity : 0 }}

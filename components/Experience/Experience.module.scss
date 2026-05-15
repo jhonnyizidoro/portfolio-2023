@@ -1,12 +1,4 @@
-@import 'styles/mixins';
-
-$dark: #221918;
-$light: #de9934;
-
-:export {
-  dark: $dark;
-  light: $light;
-}
+@use 'mixins' as *;
 
 .wrapper {
   // Animation
@@ -19,7 +11,7 @@ $light: #de9934;
 }
 
 .title {
-  color: $light;
+  color: var(--light);
   margin-bottom: 40px;
 }
 
@@ -75,7 +67,7 @@ $light: #de9934;
 }
 
 .cardTitle {
-  background: $dark;
+  background: var(--dark);
   display: inline-block;
   padding: 3px 15px;
   border: 3px solid #4f4f4f;

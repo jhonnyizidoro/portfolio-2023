@@ -1,12 +1,5 @@
-@import 'styles/mixins';
-
-$dark: #05262a;
-$light: #6ff0bb;
-
-:export {
-  dark: $dark;
-  light: $light;
-}
+@use 'sass:math';
+@use 'mixins' as *;
 
 .wrapper {
   width: 1500px;
@@ -16,7 +9,7 @@ $light: #6ff0bb;
 
 .title {
   font-size: 3.125rem;
-  color: $light;
+  color: var(--light);
 
   // Animation
   animation: slideInRight 0.35s forwards;
@@ -43,8 +36,10 @@ $light: #6ff0bb;
 }
 
 .card {
+  position: relative;
   backdrop-filter: brightness(135%);
   border-radius: 5px;
+  overflow: hidden;
   padding: 20px;
   display: flex;
   align-items: center;
@@ -57,7 +52,7 @@ $light: #6ff0bb;
     &:nth-child(#{$i}),
     &:nth-child(#{$i + 3}),
     &:nth-child(#{$i + 6}) {
-      animation-delay: #{$i / 10}s;
+      animation-delay: #{math.div($i, 10)}s;
     }
   }
 }

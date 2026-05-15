@@ -1,12 +1,4 @@
-@import 'styles/mixins';
-
-$dark: #140000;
-$light: #c80c00;
-
-:export {
-  dark: $dark;
-  light: $light;
-}
+@use 'mixins' as *;
 
 .content {
   text-align: center;
@@ -14,7 +6,7 @@ $light: #c80c00;
 
 .title {
   font-size: 3.125rem;
-  color: $light;
+  color: var(--light);
 
   // Animation
   animation: slideDown 0.85s;
@@ -59,8 +51,8 @@ $light: #c80c00;
   &:nth-child(1) {
     background: linear-gradient(
       to bottom,
-      rgba($light, 0.38),
-      rgba($light, 0.21)
+      rgba(var(--light), 0.38),
+      rgba(var(--light), 0.21)
     );
   }
 
@@ -68,7 +60,7 @@ $light: #c80c00;
     background: linear-gradient(
       to bottom,
       rgba(white, 0.25),
-      rgba($light, 0.07)
+      rgba(var(--light), 0.07)
     );
   }
 }

@@ -21,12 +21,7 @@ const tracks = [
   'General Elektriks - Raid The Radio',
 ]
 
-interface Props {
-  dark: string
-  light: string
-}
-
-const Player: FC<Props> = ({ light, dark }) => {
+const Player: FC = () => {
   const { t } = useTranslation({ ptBr, enUs })
   const [currentTrack, setCurrentTrack] = useState<number>(0)
   const [playing, setPlaying] = useState(false)
@@ -82,17 +77,18 @@ const Player: FC<Props> = ({ light, dark }) => {
           src={`/songs/${t}.mp3`}
           preload='none'
           onEnded={handleNext}
-          ref={(el) => (refs.current[i] = el)}
+          ref={(el) => {
+            if (el) refs.current[i] = el
+          }}
         />
       ))}
       <button
         type='button'
         onClick={handlePlay}
         aria-label={t.title}
-        style={{ background: light }}
         className={`${styles.playPause} ${playing && styles.playPauseAnim}`}
       >
-        {playing ? <PauseSvg fill={dark} /> : <PlaySvg fill={dark} />}
+        {playing ? <PauseSvg /> : <PlaySvg />}
       </button>
       <div className={styles.content}>
         {t.title}
@@ -114,8 +110,6 @@ const Player: FC<Props> = ({ light, dark }) => {
         aria-label='Volume'
         onChange={handleVolume}
         className={styles.volume}
-        // @ts-ignore
-        style={{ '--dark': dark, '--light': light }}
       />
     </div>
   )

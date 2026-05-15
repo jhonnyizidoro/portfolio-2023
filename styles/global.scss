@@ -2,6 +2,31 @@
   box-sizing: border-box;
 }
 
+body[data-section='1'] {
+  --dark: #1d1d1d;
+  --light: #3e95fb;
+}
+
+body[data-section='2'] {
+  --dark: #1d0039;
+  --light: #af44ff;
+}
+
+body[data-section='3'] {
+  --dark: #221918;
+  --light: #de9934;
+}
+
+body[data-section='4'] {
+  --dark: #05262a;
+  --light: #6ff0bb;
+}
+
+body[data-section='5'] {
+  --dark: #140000;
+  --light: #c80c00;
+}
+
 html,
 body,
 button {

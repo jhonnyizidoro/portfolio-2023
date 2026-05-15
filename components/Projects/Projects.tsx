@@ -33,7 +33,7 @@ const Projects: FC = () => {
               target='_blank'
               aria-label={`${t.linkLabel} ${p.name}`}
             >
-              <Background image={cardBackground} opacity={0.11} />
+              <Background image={cardBackground} opacity={0.11} sizes='(max-width: 768px) 95vw, 500px' />
               <Image
                 src={`/images/projects/${p.id}-m.jpg`}
                 alt=''

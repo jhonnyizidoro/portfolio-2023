@@ -1,11 +1,3 @@
-$dark: #1d1d1d;
-$light: #3e95fb;
-
-:export {
-  dark: $dark;
-  light: $light;
-}
-
 .content {
   text-align: center;
   max-width: 600px;
@@ -14,7 +6,7 @@ $light: #3e95fb;
 }
 
 .title {
-  color: $light;
+  color: var(--light);
   font-size: 3.75rem;
 }
 

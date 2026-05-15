@@ -1,12 +1,5 @@
-@import 'styles/mixins';
-
-$dark: #1d0039;
-$light: #af44ff;
-
-:export {
-  dark: $dark;
-  light: $light;
-}
+@use 'sass:math';
+@use 'mixins' as *;
 
 .card {
   backdrop-filter: blur(5px) brightness(125%);
@@ -19,7 +12,7 @@ $light: #af44ff;
 
 .title {
   font-size: 2.5rem;
-  color: $light;
+  color: var(--light);
 }
 
 .text {
@@ -49,7 +42,7 @@ $light: #af44ff;
 
   @for $i from 1 through 9 {
     &:nth-child(#{$i}) {
-      animation-delay: #{$i / 30}s;
+      animation-delay: #{math.div($i, 30)}s;
     }
   }
 }
@@ -102,7 +95,7 @@ $light: #af44ff;
   }
 
   &::-webkit-scrollbar-thumb {
-    background: $light;
+    background: var(--light);
     border-radius: 10px;
   }
 }
@@ -120,7 +113,11 @@ $light: #af44ff;
 }
 
 .detailedListItem {
-  background: linear-gradient(to bottom, rgba($dark, 0.8), rgba($dark, 0.6));
+  background: linear-gradient(
+    to bottom,
+    rgba(var(--dark), 0.8),
+    rgba(var(--dark), 0.6)
+  );
   padding: 15px 0;
   text-align: center;
   border-radius: 4px;
