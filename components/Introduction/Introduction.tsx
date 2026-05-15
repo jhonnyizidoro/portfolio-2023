@@ -8,6 +8,7 @@ import enUs from './translations/en-US.json'
 import ptBr from './translations/pt-BR.json'
 
 import Background from '@/components/Background/Background'
+import Section from '@/components/Section/Section'
 
 const Introduction: FC = () => {
   const [subtitle, setSubtitle] = useState('')
@@ -58,7 +59,7 @@ const Introduction: FC = () => {
   }, [handleSubtitle])
 
   return (
-    <>
+    <Section>
       <Background image={background} opacity={0.5} />
       <div className={styles.content}>
         <h1 className={styles.title}>{t.title}</h1>
@@ -68,7 +69,7 @@ const Introduction: FC = () => {
         <div className={styles.spacer} />
         <p className={styles.text}>{t.text}</p>
       </div>
-    </>
+    </Section>
   )
 }
 

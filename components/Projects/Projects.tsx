@@ -11,12 +11,13 @@ import enUs from './translations/en-US.json'
 import ptBr from './translations/pt-BR.json'
 
 import Background from '@/components/Background/Background'
+import Section from '@/components/Section/Section'
 
 const Projects: FC = () => {
   const { t } = useTranslation({ ptBr, enUs })
 
   return (
-    <>
+    <Section>
       <Background image={background} opacity={0.2} />
       <div className={styles.wrapper}>
         <div>
@@ -33,7 +34,11 @@ const Projects: FC = () => {
               target='_blank'
               aria-label={`${t.linkLabel} ${p.name}`}
             >
-              <Background image={cardBackground} opacity={0.11} sizes='(max-width: 768px) 95vw, 500px' />
+              <Background
+                image={cardBackground}
+                opacity={0.11}
+                sizes='(max-width: 768px) 95vw, 500px'
+              />
               <Image
                 src={`/images/projects/${p.id}-m.jpg`}
                 alt=''
@@ -50,7 +55,7 @@ const Projects: FC = () => {
           ))}
         </div>
       </div>
-    </>
+    </Section>
   )
 }
 

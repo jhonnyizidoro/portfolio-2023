@@ -11,12 +11,13 @@ import enUs from './translations/en-US.json'
 import ptBr from './translations/pt-BR.json'
 
 import Background from '@/components/Background/Background'
+import Section from '@/components/Section/Section'
 
 const End: FC = () => {
   const { t } = useTranslation({ enUs, ptBr })
 
   return (
-    <>
+    <Section>
       <Background image={background} opacity={0.15} />
       <div className={styles.content}>
         <h1 className={styles.title}>{t.title}</h1>
@@ -55,7 +56,7 @@ const End: FC = () => {
           E-mail: jhonny-cwb@hotmail.com
         </Link>
       </div>
-    </>
+    </Section>
   )
 }
 

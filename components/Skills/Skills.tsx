@@ -10,6 +10,7 @@ import enUs from './translations/en-US.json'
 import ptBr from './translations/pt-BR.json'
 
 import Background from '@/components/Background/Background'
+import Section from '@/components/Section/Section'
 
 const list = [
   'React',
@@ -91,7 +92,7 @@ const Skills: FC = () => {
   const [detailed, setDetailed] = useState(false)
 
   return (
-    <>
+    <Section>
       <Background image={background} opacity={0.5} />
       <div className={styles.wrapper}>
         <div className={styles.card}>
@@ -146,7 +147,7 @@ const Skills: FC = () => {
           </div>
         )}
       </div>
-    </>
+    </Section>
   )
 }
 

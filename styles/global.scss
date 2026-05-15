@@ -27,6 +27,10 @@ body[data-section='5'] {
   --light: #c80c00;
 }
 
+body {
+  background-color: var(--dark);
+}
+
 html,
 body,
 button {

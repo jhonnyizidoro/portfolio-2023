@@ -1,6 +1,5 @@
 import { FC, useCallback, useEffect, useMemo, useState } from 'react'
 
-import Container from '@/components/Container/Container'
 import End from '@/components/End/End'
 import Experience from '@/components/Experience/Experience'
 import Introduction from '@/components/Introduction/Introduction'
@@ -26,7 +25,7 @@ const HomePage: FC = () => {
   }, [section])
 
   return (
-    <Container>
+    <>
       <SEO />
       <Menu />
       {section === 1 && <Introduction />}
@@ -39,7 +38,7 @@ const HomePage: FC = () => {
         onPrevious={() => handleSectionChange('previous')}
         onNext={() => handleSectionChange('next')}
       />
-    </Container>
+    </>
   )
 }
 

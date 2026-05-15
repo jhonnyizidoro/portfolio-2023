@@ -8,6 +8,7 @@
   position: relative;
   overflow: hidden;
   background-color: var(--dark);
+  animation: showSection 0.2s forwards;
 }
 
 @include desktop {
@@ -21,5 +22,14 @@
   .section {
     padding-top: 10px;
     padding-bottom: 143px;
+  }
+}
+
+@keyframes showSection {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

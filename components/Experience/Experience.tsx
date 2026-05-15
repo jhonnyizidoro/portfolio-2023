@@ -10,6 +10,7 @@ import enUs from './translations/en-US.json'
 import ptBr from './translations/pt-BR.json'
 
 import Background from '@/components/Background/Background'
+import Section from '@/components/Section/Section'
 
 const Experience: FC = () => {
   const { t } = useTranslation({ enUs, ptBr })
@@ -17,25 +18,17 @@ const Experience: FC = () => {
 
   const handleSlideChange = useCallback(
     (action: 'previous' | 'next') => {
-      if (action === 'previous') {
-        if (slide > 1) {
-          setSlide(slide - 1)
-        } else {
-          setSlide(t.experiences.length)
-        }
-      } else {
-        if (slide < t.experiences.length) {
-          setSlide(slide + 1)
-        } else {
-          setSlide(1)
-        }
-      }
+      setSlide((slide) => {
+        if (action === 'previous')
+          return slide > 1 ? slide - 1 : t.experiences.length
+        return slide < t.experiences.length ? slide + 1 : 1
+      })
     },
-    [slide, t.experiences.length],
+    [t.experiences.length],
   )
 
   return (
-    <>
+    <Section>
       <Background image={background} opacity={0.15} />
       <div className={styles.wrapper}>
         <div className={styles.content}>
@@ -85,7 +78,7 @@ const Experience: FC = () => {
           </button>
         </div>
       </div>
-    </>
+    </Section>
   )
 }
 
