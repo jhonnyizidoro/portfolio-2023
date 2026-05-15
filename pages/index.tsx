@@ -22,6 +22,7 @@ const HomePage: FC = () => {
 
   useEffect(() => {
     document.body.setAttribute('data-section', String(section))
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }, [section])
 
   return (

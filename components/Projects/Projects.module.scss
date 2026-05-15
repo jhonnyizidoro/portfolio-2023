@@ -79,7 +79,6 @@
 
 .repositories {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
@@ -96,6 +95,10 @@
       backdrop-filter: brightness(180%);
       box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
     }
+  }
+
+  .repositories {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
