@@ -25,24 +25,36 @@ const End: FC = () => {
         <div className={styles.text}>{t.text}</div>
         <div className={styles.buttons}>
           <div className={styles.button}>
-            <Link href='mailto:jhonny-cwb@hotmail.com' className={styles.link}>
+            <Link
+              href='mailto:jhonny-cwb@hotmail.com'
+              aria-label={t.emailLabel}
+              className={styles.link}
+            >
               <EnvelopeSvg />
             </Link>
-            <Link href='tel:+5541991791053' className={styles.link}>
+            <Link
+              href='tel:+5541991791053'
+              aria-label={t.phoneLabel}
+              className={styles.link}
+            >
               <PhoneSvg />
             </Link>
           </div>
           <div className={styles.button}>
             <Link
               href='https://www.linkedin.com/in/jhonnyizidoro/'
-              rel='noopener'
+              rel='noopener noreferrer'
+              target='_blank'
+              aria-label={t.linkedinLabel}
               className={styles.link}
             >
               <LinkedinSvg />
             </Link>
             <Link
               href='https://github.com/jhonnyizidoro'
-              rel='noopener'
+              rel='noopener noreferrer'
+              target='_blank'
+              aria-label={t.githubLabel}
               className={styles.link}
             >
               <GitHubSvg />

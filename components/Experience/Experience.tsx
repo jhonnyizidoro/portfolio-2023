@@ -46,7 +46,11 @@ const Experience: FC = () => {
           </button>
           <div className={styles.carousel}>
             <h2 className={styles.subtitle}>{t.subtitle}</h2>
-            <div className={styles.carouselSlides}>
+            <div
+              className={styles.carouselSlides}
+              aria-live='polite'
+              aria-atomic='true'
+            >
               {t.experiences.map((e) => (
                 <div
                   className={styles.card}
@@ -58,11 +62,16 @@ const Experience: FC = () => {
                 </div>
               ))}
             </div>
-            <div className={styles.dots}>
-              {t.experiences.map((_, i) => (
-                <div
-                  className={styles.dot}
+            <div className={styles.dots} role='tablist'>
+              {t.experiences.map((e, i) => (
+                <button
+                  type='button'
+                  role='tab'
                   key={i}
+                  className={styles.dot}
+                  aria-label={e.company}
+                  aria-selected={i + 1 === slide}
+                  onClick={() => setSlide(i + 1)}
                   style={{ opacity: i + 1 === slide ? 1 : 0.5 }}
                 />
               ))}

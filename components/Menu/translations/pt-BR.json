@@ -1,4 +1,9 @@
 {
   "buttonText": "Change language to English",
-  "linkLocale": "en-US"
+  "linkLocale": "en-US",
+  "emailLabel": "Enviar email",
+  "phoneLabel": "Ligar",
+  "linkedinLabel": "Visitar perfil do LinkedIn",
+  "githubLabel": "Visitar perfil do GitHub",
+  "languageMenuLabel": "Configurações de idioma"
 }

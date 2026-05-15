@@ -17,7 +17,13 @@ const Menu: FC = () => {
 
   return (
     <div className={styles.menu}>
-      <div className={styles.wrapper}>
+      <div
+        className={styles.wrapper}
+        tabIndex={0}
+        role='button'
+        aria-label={t.languageMenuLabel}
+        aria-haspopup='true'
+      >
         <Image
           alt=''
           width={20}
@@ -40,22 +46,34 @@ const Menu: FC = () => {
           {t.buttonText}
         </Link>
         <div className={styles.listItem}>
-          <Link href='mailto:jhonny-cwb@hotmail.com' className={styles.link}>
+          <Link
+            href='mailto:jhonny-cwb@hotmail.com'
+            aria-label={t.emailLabel}
+            className={styles.link}
+          >
             <EnvelopeSvg />
           </Link>
-          <Link href='tel:+5541991791053' className={styles.link}>
+          <Link
+            href='tel:+5541991791053'
+            aria-label={t.phoneLabel}
+            className={styles.link}
+          >
             <PhoneSvg />
           </Link>
           <Link
             href='https://www.linkedin.com/in/jhonnyizidoro/'
-            rel='noopener'
+            rel='noopener noreferrer'
+            target='_blank'
+            aria-label={t.linkedinLabel}
             className={styles.link}
           >
             <LinkedinSvg />
           </Link>
           <Link
             href='https://github.com/jhonnyizidoro'
-            rel='noopener'
+            rel='noopener noreferrer'
+            target='_blank'
+            aria-label={t.githubLabel}
             className={styles.link}
           >
             <GitHubSvg />

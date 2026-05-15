@@ -85,7 +85,8 @@ const Player: FC = () => {
       <button
         type='button'
         onClick={handlePlay}
-        aria-label={t.title}
+        aria-label={playing ? t.pauseButtonLabel : t.playButtonLabel}
+        aria-pressed={playing}
         className={`${styles.playPause} ${playing && styles.playPauseAnim}`}
       >
         {playing ? <PauseSvg /> : <PlaySvg />}

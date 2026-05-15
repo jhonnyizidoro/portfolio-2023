@@ -85,6 +85,10 @@
   width: 7px;
   height: 7px;
   background: white;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  flex-shrink: 0;
 }
 
 @include desktop {

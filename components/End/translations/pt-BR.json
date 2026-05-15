@@ -2,5 +2,9 @@
   "title": "Isso é tudo!",
   "subtitle": "Obrigado por fazer esse tour",
   "text": "Quer entrar em contato comigo? Sinta-se à vontade para entrar em contato comigo usando qualquer canal abaixo 😊",
-  "phone": "Contato: 41 9 9179-1053"
+  "phone": "Contato: 41 9 9179-1053",
+  "emailLabel": "Enviar email",
+  "phoneLabel": "Ligar",
+  "linkedinLabel": "Visitar perfil do LinkedIn",
+  "githubLabel": "Visitar perfil do GitHub"
 }

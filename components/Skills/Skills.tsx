@@ -1,6 +1,6 @@
 import { useTranslation } from '@/hooks/translation'
 
-import { FC, useState } from 'react'
+import { FC, useCallback, useEffect, useRef, useState } from 'react'
 
 import { CloseSvg } from '@/svg'
 
@@ -90,6 +90,16 @@ const detailedList = [
 const Skills: FC = () => {
   const { t } = useTranslation({ enUs, ptBr })
   const [detailed, setDetailed] = useState(false)
+  const triggerRef = useRef<HTMLButtonElement>(null)
+  const closeRef = useRef<HTMLButtonElement>(null)
+
+  useEffect(() => {
+    if (detailed) {
+      closeRef.current?.focus()
+    } else {
+      triggerRef.current?.focus()
+    }
+  }, [detailed])
 
   return (
     <Section>
@@ -111,19 +121,21 @@ const Skills: FC = () => {
               </li>
             ))}
           </ul>
-          <span
-            role='button'
+          <button
+            type='button'
+            ref={triggerRef}
             className={styles.link}
             onClick={() => setDetailed(true)}
           >
             {t.buttonText}
-          </span>
+          </button>
         </div>
 
         {detailed && (
           <div className={styles.detailedListWrapper}>
             <button
               type='button'
+              ref={closeRef}
               aria-label={t.closeListButtonLabel}
               className={styles.detailedListClose}
               onClick={() => setDetailed(false)}

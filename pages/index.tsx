@@ -1,4 +1,4 @@
-import { FC, useCallback, useEffect, useMemo, useState } from 'react'
+import { FC, useCallback, useEffect, useState } from 'react'
 
 import End from '@/components/End/End'
 import Experience from '@/components/Experience/Experience'

@@ -5,7 +5,8 @@
   top: 0;
   padding: 15px;
 
-  &:hover {
+  &:hover,
+  &:focus-within {
     .list {
       display: block !important;
     }

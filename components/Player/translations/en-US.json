@@ -1,4 +1,6 @@
 {
   "title": "Play a song while you navigate",
+  "playButtonLabel": "Play",
+  "pauseButtonLabel": "Pause",
   "skipButtonLabel": "Skip to the next song"
 }

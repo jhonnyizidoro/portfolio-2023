@@ -2,7 +2,7 @@ import { Head, Html, Main, NextScript } from 'next/document'
 import { FC } from 'react'
 
 const Document: FC = () => (
-  <Html lang='en'>
+  <Html>
     <Head>
       <link rel='preconnect' href='https://fonts.googleapis.com' />
       <link

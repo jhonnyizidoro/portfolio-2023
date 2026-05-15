@@ -63,8 +63,13 @@ const Introduction: FC = () => {
       <Background image={background} opacity={0.5} />
       <div className={styles.content}>
         <h1 className={styles.title}>{t.title}</h1>
-        <h2 className={styles.subtitle}>
-          {t.subtitleStart} <u>{subtitle}</u>
+        <h2
+          className={styles.subtitle}
+          aria-label={`${t.subtitleStart} ${t.subtitles.join(', ')}`}
+        >
+          <span aria-hidden='true'>
+            {t.subtitleStart} <span className={styles.subtitleAnimated}>{subtitle}</span>
+          </span>
         </h2>
         <div className={styles.spacer} />
         <p className={styles.text}>{t.text}</p>
