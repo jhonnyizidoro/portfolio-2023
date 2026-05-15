@@ -1,8 +1,8 @@
 {
   "title": "Minhas Skills",
   "texts": [
-    "Olá, eu sou o Jhonny e moro em Curitiba. Tenho trabalhado como desenvolvedor de software pelos últimos 6 anos. No começo da minha carreira eu trabalhei como desenvolvedor PHP, mas eu rapidamente migrei para a área que eu mais amo: o ecossistema React / Node.",
-    "Atualmente estou trabalhando em um projeto liderando um time, tomando decisões técnicas e também gerenciando a sprint. Esse projeto é meio período, então também trabalho como freelancer."
+    "Com o tempo, tive a chance de trabalhar em toda a stack — desde interfaces detalhadas em React até serviços de backend que lidam com complexidade real. Comecei com PHP e Laravel, depois me apaixonei pelo ecossistema React / Node, e mais recentemente tenho mergulhado em orquestração de IA e integrações com LLMs.",
+    "Gosto de aprender ferramentas novas quando faz sentido, mas me importo mais em escrever coisas que funcionam bem de verdade do que em seguir tendências. A lista detalhada abaixo é um retrato honesto do que eu já usei pra entregar."
   ],
   "buttonText": "Clique aqui para uma lista detalhada",
   "closeListButtonLabel": "Fechar lista detalhada"

@@ -1,8 +1,8 @@
 {
   "title": "My Skills",
   "texts": [
-    "Hi, I'm Jhonny and I live in Brazil. I've been working as a software developer for the last 6 years. At the beginning of my career I worked as PHP developer, but I quickly migrated to the area that I love: the React / Node ecosystem.",
-    "I'm currently working at a project leading a team, making technical decisions and managing the sprint. This is a part time project, so I'm also working as a freelancer."
+    "Over the years I've had the chance to work across the full stack — from crafting pixel-perfect UIs in React to building backend services that handle real-world complexity. I started out in PHP and Laravel, then fell hard for the React / Node ecosystem, and lately I've been diving into AI orchestration and LLM integrations.",
+    "I like picking up new tools when they make sense, but I care more about writing things that actually work well than about chasing trends. The detailed list below is a pretty honest snapshot of what I've actually shipped with."
   ],
   "buttonText": "Click here for a detailed list",
   "closeListButtonLabel": "Close detailed list"

@@ -1,6 +1,11 @@
 {
   "title": "Hello, I'm Jhonny",
   "subtitleStart": "I'm a: ",
-  "subtitles": ["frontend engineer", "web designer", "tech lead"],
+  "subtitles": [
+    "software engineer",
+    "frontend lover",
+    "AI orchestrator",
+    "leader"
+  ],
   "text": "Use the buttons bellow, take a tour, and know me better"
 }
