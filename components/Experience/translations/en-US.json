@@ -8,7 +8,7 @@
   "experiences": [
     {
       "company": "Fox Corporation",
-      "text": "At Fox I worked as a senior frontend engineer on a smart TV streaming app built with Remix and React Router 7. I joined to take the project from zero to launch — handling architecture, implementation, and cross-platform support across Tizen, WebOS, Vizio, and Comcast TVs. I also integrated AI-assisted tooling into the development workflow to speed up some of the more repetitive parts of the build.",
+      "text": "Rebuilt the entire smart TV streaming app from scratch and shipped a production-ready platform within 6 months. Optimized the UI to run on low-end hardware (2018 Tizen and WebOS models), cutting memory usage by 50% compared to the previous version. Handled full cross-platform support across Tizen, WebOS, Vizio, and Comcast TVs, and wrote comprehensive unit and integration tests to ensure UI stability across all devices.",
       "stack": [
         "Remix",
         "React Router 7",
@@ -25,7 +25,7 @@
     },
     {
       "company": "Globo",
-      "text": "Globoplay is the streaming platform of Globo, Brazil's biggest TV network, with millions of active users. Building for Smart TVs pushed me to think differently about performance — the constraints are real and the tolerance for lag is zero. Managing cross-manufacturer compatibility while keeping everything snappy was one of the hardest technical challenges I've worked through.",
+      "text": "Developed features and UI components for Globoplay — Globo's streaming platform serving millions of active users across Brazil. Built reusable, performant React components using Canvas Web APIs to handle playback and UI rendering on Samsung, LG, and Sony smart TVs. Tracked down and resolved complex performance bottlenecks and memory leaks in a hardware-constrained environment where any lag is immediately visible to millions of users.",
       "stack": [
         "ReactJS",
         "Node",
@@ -38,7 +38,7 @@
     },
     {
       "company": "Vizabli",
-      "text": "Short-term contract to modernize a series of microservices — but the scope ended up being substantial. I upgraded a 10-year-old codebase from Node.js 12 to 24 and MongoDB 4 to 8, refactored it to run in modern Docker environments, and migrated version control and packages from AWS CodeArtifact to GitHub. I also automated deployment workflows with GitHub Actions and leaned on AI coding tools throughout to move faster on the more tedious parts of the migration.",
+      "text": "Modernized a 10-year-old microservices codebase — upgrading Node.js 12→24 and MongoDB 4→8 and refactoring it for modern Docker environments. Fixed security flaws across the entire stack, bringing open vulnerabilities from hundreds down to zero. Optimized backend architecture and database indexes, scaling throughput from 10 to over 100 RPS. Migrated version control from AWS CodeArtifact to GitHub and set up automated CI/CD pipelines with GitHub Actions.",
       "stack": [
         "Node",
         "React",
@@ -59,7 +59,7 @@
     },
     {
       "company": "World Pulse",
-      "text": "World Pulse is an NGO based in Portland, Oregon. I came in as tech lead and owned the whole thing — picking the technologies, setting up the infrastructure, and managing the team day-to-day. We built the platform from scratch using NextJS, GraphQL, Directus, Postgres, and Strapi. Beyond the technical side, I ran sprint planning, reviewed PRs, and handled all releases.",
+      "text": "Joined as tech lead at World Pulse (NGO based in Portland, Oregon) and owned the full platform build — from technology selection and AWS infrastructure setup to day-to-day team management. Architected and shipped the entire platform from scratch using NextJS, Node.js, GraphQL, Directus, Postgres, and Strapi. Led sprint planning, all code reviews, and every release cycle across a distributed international team.",
       "stack": [
         "NextJS",
         "Node",

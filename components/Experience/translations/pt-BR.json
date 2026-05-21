@@ -8,7 +8,7 @@
   "experiences": [
     {
       "company": "Fox Corporation",
-      "text": "Na Fox trabalhei como engenheiro frontend sênior em um app de streaming para smart TVs, construído com Remix e React Router 7. Entrei para levar o projeto do zero ao lançamento — cuidando da arquitetura, implementação e suporte multiplataforma em TVs Tizen, WebOS, Vizio e Comcast. Também integrei ferramentas de IA ao fluxo de desenvolvimento para acelerar as partes mais repetitivas do projeto.",
+      "text": "Reconstruí o app de streaming para smart TVs do zero e entreguei a plataforma em produção em 6 meses. Otimizei a interface para rodar em hardware de baixo desempenho (modelos Tizen e WebOS de 2018), reduzindo o consumo de memória em 50% em relação à versão anterior. Cuidei do suporte multiplataforma completo em TVs Tizen, WebOS, Vizio e Comcast, e escrevi testes unitários e de integração abrangentes para garantir estabilidade da UI em todos os dispositivos.",
       "stack": [
         "Remix",
         "React Router 7",
@@ -25,7 +25,7 @@
     },
     {
       "company": "Globo",
-      "text": "O Globoplay é a plataforma de streaming da Globo, maior emissora do Brasil, com milhões de usuários ativos. Desenvolver para Smart TVs me forçou a pensar diferente sobre performance — as restrições são reais e a tolerância para travamentos é zero. Gerenciar a compatibilidade entre fabricantes diferentes sem abrir mão da fluidez foi um dos maiores desafios técnicos que já enfrentei.",
+      "text": "Desenvolvi funcionalidades e componentes de UI para o Globoplay — plataforma de streaming da Globo com milhões de usuários ativos no Brasil. Construí componentes React reutilizáveis e performáticos usando Canvas Web APIs para lidar com reprodução e renderização de UI em smart TVs Samsung, LG e Sony. Identifiquei e resolvi gargalos de performance complexos e memory leaks em um ambiente com hardware limitado, onde qualquer travamento é percebido imediatamente por milhões de usuários.",
       "stack": [
         "ReactJS",
         "Node",
@@ -38,7 +38,7 @@
     },
     {
       "company": "Vizabli",
-      "text": "Contrato de curto prazo para modernizar uma série de microsserviços — mas o escopo acabou sendo bem maior do que o esperado. Fiz a migração de um codebase de 10 anos do Node.js 12 para o 24 e do MongoDB 4 para o 8, refatorei para rodar em ambientes Docker modernos e migrei o controle de versão e pacotes do AWS CodeArtifact para o GitHub. Também automatizei os fluxos de deploy com GitHub Actions e usei ferramentas de IA ao longo do processo para avançar mais rápido nas partes mais trabalhosas da migração.",
+      "text": "Modernizei um codebase de microsserviços com 10 anos — migrando Node.js 12→24 e MongoDB 4→8 e refatorando para rodar em ambientes Docker modernos. Corrigi falhas de segurança em toda a stack, reduzindo vulnerabilidades abertas de centenas para zero. Otimizei a arquitetura do backend e os índices do banco de dados, escalando o throughput de 10 para mais de 100 RPS. Migrei o controle de versão do AWS CodeArtifact para o GitHub e configurei pipelines de CI/CD automatizados com GitHub Actions.",
       "stack": [
         "Node",
         "React",
@@ -59,7 +59,7 @@
     },
     {
       "company": "World Pulse",
-      "text": "World Pulse é uma ONG baseada em Portland, Oregon. Entrei como tech lead e fui responsável por tudo — escolha das tecnologias, configuração da infraestrutura e gestão do time no dia a dia. Construímos a plataforma do zero com NextJS, GraphQL, Directus, Postgres e Strapi. Além da parte técnica, conduzi os planejamentos de sprint, revisei PRs e cuidei de todos os releases.",
+      "text": "Entrei como tech lead na World Pulse (ONG baseada em Portland, Oregon) e fui responsável por todo o desenvolvimento da plataforma — desde a escolha das tecnologias e configuração da infraestrutura na AWS até a gestão diária do time. Arquitetei e entreguei a plataforma do zero usando NextJS, Node.js, GraphQL, Directus, Postgres e Strapi. Conduzi os planejamentos de sprint, todas as revisões de código e cada ciclo de release em um time distribuído e internacional.",
       "stack": [
         "NextJS",
         "Node",
